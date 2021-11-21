@@ -1,0 +1,5376 @@
+
+-:C++ Programing language:-
+
+
+C++ Basic Structure:-
+
+Turbo c editor partten:-
+#include<iostream>
+int main()
+{
+    int l,b,a;
+    cout<<"enter length";
+    cin>>l;
+    cout<<"enter breadth";
+    cin>>b;
+    a=l*b;
+    cout<<"area of rectangle is"<<a;
+    return 0;
+}
+
+Vs code editor partten:-
+#include<iostream>
+int main()
+{
+    int l,b,a;
+    std::cout<<"enter length";
+    std::cin>>l;
+    std::cout<<"enter breadth";
+    std::cin>>b;
+    a=l*b;
+    std::cout<<"area of rectangle is"<<a;
+    return 0;
+}
+
+Array:- an array is collection of similar data items;
+    	array always run 0 .   
+Two formate for array:-
+1. 1d array
+2. 2d array
+
+Basic:-
+#include<iostream>
+//using namespace std;
+int main(){
+    int a[10],i,sum=0;
+    std::cout<<"Enter ten value in array=\n";
+    for(i=0;i<=9;i++)
+    {
+        std::cin>>a[i];
+    }
+    for(i=0;i<=9;i++)
+    {
+        sum=sum+a[i];
+    }
+    std::cout<<sum;
+    return 0;
+}
+
+1. 1d array:-
+//Enter ten values and print sum avg;
+#include<iostream>
+using namespace std;
+int  main()
+{
+int a[10],b,sum=0;
+float avg;
+cout<<"Enter 10 value in array=\n";
+for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+for(b=0;b<=9;b++)
+	{
+		sum=sum+a[b];
+	}
+avg=float(sum)/10;
+cout<<"sum="<<sum;
+cout<<"avg="<<avg;
+return 0;
+}
+
+//Enter 10 value in array and print largest, smallest value;
+#include<iostream>
+using namespace std;
+int main()
+{
+int a[10],b,l,s;
+cout<<"Enter 10 value in array";
+for(b=0;b<=9;b++)
+{
+cin>>a[b];
+}
+l=a[0];
+s=a[0];
+for(b=0;b<=9;b++)
+{
+	if(a[b]>l)
+	{
+	l=a[b];
+	}
+	if(s>a[b])
+	{
+	s=a[b];
+	}
+}
+cout<<"largest value=\n"<<l;
+cout<<"smallest value="<<s;
+return 0;
+}
+
+//Enter 10 value and count positive, negative in array formate;
+#include<iostream>
+using namespace std;
+int main()
+{
+	int a[10],i,pc=0,nc=0;
+	cout<<"Enter 10 value in array";
+	for(i=0;i<=9;i++)
+	{
+		cin>>a[i];
+	}
+	pc=0;
+	nc=0;
+	for(i=0;i<=9;i++)
+	{
+		if(a[i]>0)
+		{
+			pc++;
+		}
+		if(a[i]<0)
+		{
+			nc++;
+		}
+	}
+	cout<<"Positive value="<<pc;
+	cout<<"\nnegative value="<<nc;
+}
+
+//Enter ten value and print even in array formate;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b;
+	cout<<"Enter ten value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	for(b=0;b<=9;b++)
+	{
+		if(a[b]%2==0)
+		{
+			cout<<"\t"<<a[b];
+		}
+	}
+return 0;
+}
+
+//Enter ten value and print odd in array formate;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b;
+	cout<<"Enter ten value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	for(b=0;b<=9;b++)
+	{
+		if(a[b]%2==1)
+		{
+			cout<<"\t"<<a[b];
+		}
+	}
+return 0;
+}
+
+//Enter 10 value in array and count prime no;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,c,i=0,count=0;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"All prime no.=\n";
+	for(b=0;b<=9;b++)
+	{
+		i=0;
+		for(c=2;c<a[b];c++)
+		{
+			if(a[b]%c==0)
+			{
+				i=1;
+				break;
+			}
+		}
+		if(i==0)
+		{
+			count++;
+			cout<<"\t"<<a[b];
+		}
+	} 
+	cout<<"\nCount prime no.="<<count;
+return 0;
+}
+
+//Enter 10 value in array and count perfect no;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,c,i,sum=0,count=0;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"perfect no.=";
+	for(b=0;b<=9;b++)
+	{
+		sum=0;
+		for(c=1;c<a[b];c++)
+		{
+			if(a[b]%c==0)
+			{
+				sum=sum+c;
+			}
+		}
+		if(sum==a[b])
+		{
+			cout<<"\t"<<c;
+			count++;
+		}
+	}
+	cout<<"\nTotal count="<<count;
+return 0;
+}
+
+//Enter 10 value in array and count armstrong no.
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,c,i,count=0,sum=0,ac=0,p,r,f,x;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"armstrong no.=";
+	for(b=0;b<=9;b++)
+	{
+		count=0;
+		for(i=a[b];i>0;i=i/10)
+		{
+			count++;
+		}
+		sum=0;
+		for(x=a[b];x!=0;x=x/10)
+		{
+			r=x%10;
+			f=1;
+			p=count;
+			while(p>=1)
+			{
+				f=f*r;
+				p--;
+			}
+			sum=sum+f;
+		}
+		if(sum==a[b])
+		{
+			ac++;
+			cout<<"\t"<<sum;
+		}
+	}
+	cout<<"\nTotal count="<<ac;
+return 0;
+}
+
+//Enter 10 value and count palindrome from array;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,c,i,count=0,r;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"Palindrome no.=";
+	count=0;
+	for(b=0;b<=9;b++)
+	{
+		i=0;
+		for(c=a[b];c>0;c=c/10)
+		{
+			r=c%10;
+			i=(i*10)+r;
+		}
+		if(i==a[b])
+		{
+			count++;
+			cout<<"\t"<<i;
+		}
+	}
+	cout<<"\nTotal count="<<count;
+return 0;
+}
+
+//Enter ten value in array and search a value;(print found not found)
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,x,c,r,f;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"Enter search element=";
+	cin>>x;
+	for(b=0;b<=9;b++)
+	{
+		if(a[b]==x)
+		{
+			f=1;
+			break;
+		}
+	}
+	if(f==1)
+	{
+		cout<<"Element is found";
+	}
+	else
+	{
+		cout<<"Element is not found";
+	}
+return 0;
+}
+
+//Enter 10 value in array and find the difference between largest and smallest element;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,l,s,d;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	l=a[0];
+	s=a[0];
+	for(b=0;b<=9;b++)
+	{
+		if(a[b]>l)
+		{
+			l=a[b];
+		}
+		if(a[b]<s)
+		{
+			s=a[b];
+		}
+	}
+	cout<<"Largest values="<<l;
+	cout<<"\nSmallest values="<<s;
+	d=l-s;
+	cout<<"\nDifference between largest,smallest value="<<d;
+return 0;
+}
+
+//Enter 10 value in array and interchange first five elements with last five elements
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,t;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	for(b=0;b<=4;b++)
+	{
+		t=a[b];
+		a[b]=a[b+5];
+		a[b+5]=t;
+	}
+	cout<<"After interchange of element=";
+	for(b=0;b<=9;b++)
+	{
+		cout<<"\n"<<a[b];
+	}
+return 0;
+}
+
+//Enter ten value in array and insert a new no. in given position.
+#include<iostream>
+using namespace std;
+int main(){
+	int a[11],b,p,c,i;
+	cout<<"Enter ten value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"Enter position=";
+	cin>>p;
+	cout<<"Insert New no.=";
+	cin>>c;
+	cout<<"Insert element after in array=";
+	for(b=9;b>=p-1;b--)
+	{
+		a[b+1]=a[b];
+	}
+	a[p-1]=c;
+	for(b=0;b<=10;b++)
+	{
+		cout<<"\n"<<a[b];
+	}
+return 0;
+}
+
+//Enter 10 value in array and delete a no. in given position;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,c=0,p,z;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"Enter a no. you want to delete=";
+	cin>>p;
+	for(b=0;b<=9;b++)
+	{
+		if(a[b]==p)
+		{
+			c=1;
+			break;
+		}
+	}
+	if(c==1)
+	{
+		for(z=b;z<=9;z++)
+		{
+			a[z]=a[z+1];
+		}
+		cout<<"Now latest array are=\n";
+		for(b=0;b<=8;b++)
+		{
+			cout<<"\n"<<a[b];
+		}
+	}
+	else
+	{
+		for(b=0;b<=9;b++)
+		{
+			cout<<"\n"<<a[b];
+		}
+	}
+return 0;
+}
+
+//Enter 10 value in array and short in assending order;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[30],b,i,j,o;
+	cout<<"Enter ten value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	for(b=0;b<=9;b++)
+	{
+		for(i=b+1;i<=9;i++)
+		{
+			if(a[b]>a[i])
+			{
+				o=a[b];
+				a[b]=a[i];
+				a[i]=o;
+			}
+		}
+	}
+	cout<<"The element arranged in assending order=";
+	for(b=0;b<=9;b++)
+	{
+		cout<<"\n"<<a[b]; 
+	}
+return 0;
+}
+
+//Enter 10 value in array and duplicate value will be print zero;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,i;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"After zero duplicate value are=";
+	for(b=0;b<=9;b++)
+	{
+		for(i=b+1;i<=9;i++)
+		{
+			if(a[b]==a[i])
+			{
+				a[i]=0;
+			}
+		}
+	}
+	for(b=0;b<=9;b++)
+	{
+		cout<<"\n"<<a[b];
+	}
+return 0;
+}
+
+//Enter 10 value in array and print binary code;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[10],b,c,l,u,m,s,i,x;
+	cout<<"Enter 10 value in array=\n";
+	for(b=0;b<=9;b++)
+	{
+		cin>>a[b];
+	}
+	cout<<"Enter value to find=";
+	cin>>x;
+	l=0;
+	u=9;
+	while(l<=u)
+	{
+		m=(l+u)/2;
+		if(a[m]==x)
+		{
+			cout<<"value is found "<<m+1;
+			cout<<"positive value="<<a[m];
+			break;
+		}
+		else if(a[m]<x)
+		{
+			l=m;
+		}
+		else
+		{
+			u=m;
+		}
+	}
+	return 0;
+}
+
+//Enter value in array and search binary or not;
+#include<iostream>
+using namespace std;
+int main(){
+	int a[100],b,x,i=0;
+	cout<<"Enter element in array=\n";
+	cin>>x;
+	for(b=x;b>0;b=b/2)
+	{
+		a[i]=b%2;
+		i++;
+	}
+	for(b=i-1;b>=0;b--)
+	{
+		cout<<a[b];
+	}
+return 0;
+}
+
+//Enter value in array and print with oquta(18)
+#include<iostream>
+using namespace std;
+int main(){
+	int a[100],b,x,i=0;
+	cout<<"Enter element in array=";
+	cin>>x;
+	for(b=x;b>0;b=b/8)
+	{
+		a[i]=b%8;
+		i++;
+	}
+	for(b=i-1;b>=0;b--)
+	{
+		cout<<" "<<a[b];
+	}
+return 0;
+}
+
+//10=A
+//11=B
+//12=C
+//13=D 
+//14=E 
+//15=F 
+//Type for pattern in using array:-
+
+//Enter element and print this type--->431--->1 10 15--->1 A F
+//hexza(16)
+#include<iostream>
+using namespace std;
+int main(){
+	int a[100],b,x,i=0;
+	cout<<"Enter element in array=";
+	cin>>x;
+	for(b=x;b>0;b=b/16)
+	{
+		a[i]=b%16;
+		i++;
+	}
+	for(b=i-1;b>=0;b--)
+	{
+		if(a[b]==10)
+		{
+			cout<<" A ";
+		}
+		else if(a[b]==11)
+		{
+			cout<<"B ";
+		}						
+		else if(a[b]==12)
+		{
+			cout<<"C ";
+		}		
+		else if(a[b]==13)
+		{
+			cout<<"D ";
+		}
+		else if(a[b]==14)
+		{
+			cout<<"E ";
+		}		
+		else if(a[b]==15)
+		{
+			cout<<"F ";
+		}				
+		else
+		{
+			cout<<a[b];
+		}								
+	}
+return 0;
+} 
+
+2.2d array:-
+/*
+    1        2        3
+a[0][0]  a[0][1]   a[0][2]
+    4        5        6
+a[1][0]  a[1][1]   a[1][2]
+    7        8         9
+a[2][0]  a[2][1]   a[2][2]
+*/
+//print this formate;
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j;
+    cout<<"Enter three by three matrix\n";
+    for(i=0;i<=2;i++)
+    {
+       for(j=0;j<=2;j++)
+       {
+           cin>>a[i][j];
+       } 
+    }
+    cout<<"Now 3 by 3 matrix are\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cout<<" "<<a[i][j];
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
+//Enter 2 matrix and print sum;
+// a= 1  2  3   b= 1  2  3
+//    4  5  6      4  5  6
+//    7  8  9      7  8  9
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],b[3][3],i,j,d[3][3];
+    cout<<"Enter 3 by 3 matrix in a=\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter 3 by 3 matrix in b=\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    cout<<"Now 3 by 3 matrix in a are\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cout<<" "<<a[i][j];
+        }
+        cout<<"\n";
+    }
+    cout<<"Now 3 by 3 matrix in b are\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cout<<" "<<b[i][j];
+        }
+        cout<<"\n";
+    }
+    cout<<"Sum of 3 by 3 matrix\n";
+        for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+           d[i][j]=a[i][j]+b[i][j];
+           cout<<" "<<d[i][j];
+        }
+        cout<<"\n";
+    }
+return 0;
+}
+
+//Enter 3 by 3 matrix and print sum;
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j,sum=0;
+    cout<<"Enter 3 by 3 matrix\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now 3 by 3 matrix are\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cout<<" "<<a[i][j];
+            sum=sum+a[i][j];
+        }
+        cout<<"\n";
+    }
+    cout<<"Sum of matrix="<<sum;
+return 0;
+}
+
+//Enter 3 by 3 matrix and print 
+//1 4 7
+//2 5 8
+//3 6 9
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j;
+    cout<<"Enter 3 by 3 matrix\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now 3 by 3 matrix are\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cout<<" "<<a[j][i];
+        }
+        cout<<"\n";
+    }
+return 0;
+}
+
+//Enter 3 by 3 matrix and print Sum;
+//1 2 3 = 6
+//4 5 6 = 15
+//7 8 9 =24
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j,sum=0;
+    cout<<"Enter 3 by 3 matrix\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now 3 by 3 matrix are\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cout<<" "<<a[i][j];
+        }
+        cout<<"\n";
+    }
+    for(i=0;i<=2;i++)
+    {
+        sum=0;
+        for(j=0;j<=2;j++)
+        {
+            sum=sum+a[i][j];
+        }
+        cout<<"\nsum is="<<sum;
+    }
+return 0;
+}
+
+//Enter 10 value and print sum this type;
+// 1  2  3 
+// 4  5  6      
+// 7  8  9
+// --------
+// 12 15 18
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j,sum=0;
+    cout<<"Enter 3 by 3 matrix\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now 3 by 3 matrix are\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cout<<" "<<a[i][j];
+        }
+        cout<<"\n";
+    }
+    cout<<"---------\n";
+    for(i=0;i<=2;i++)
+    {
+        sum=0;
+        for(j=0;j<=2;j++)
+        {
+            sum=sum+a[j][i];
+        }
+        cout<<" "<<sum;
+    }
+return 0;
+}
+
+//Enter 3 by 3 matrix
+// 1  2  3 
+// 4  5  6      
+// 7  8  9  and print 4 5 6;
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j;
+    cout<<"Enter 3 by 3 matrix\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now matrix are:\n";
+    for(j=0;j<=2;j++)
+    {
+        cout<<" "<<a[1][j];
+    }
+return 0;
+}
+
+//Enter 3 by 3 matrix
+// 1  2  3 
+// 4  5  6      
+// 7  8  9 and print 2 5 8;
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j;
+    cout<<"Enter 3 by 3 matrix:\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now madile matrix are:\n";
+    for(i=0;i<=2;i++)
+    {
+        cout<<" "<<a[i][1];
+    }
+return 0;
+}
+
+//Enter 3 by 3 matrix
+// 1  2  3 
+// 4  5  6      
+// 7  8  9 and print 1 5 9;
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j;
+    cout<<"Enter 3 by 3 matrix\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now matrix are:\n";
+    for(i=0;i<=2;i++)
+    {
+        cout<<" "<<a[i][i];
+    }
+return 0;
+}
+
+//Enter 3 by 3 matrix
+// 1  2  3 
+// 4  5  6      
+// 7  8  9 and print 3 5 9;
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],i,j;
+    cout<<"Enter 3 by 3 matrix\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Now matrix are:\n";
+    for(i=0;i<=2;i++)
+    {
+        cout<<" "<<a[i][2-i];
+    }
+return 0;
+}
+
+//Enter 2 matrix and print result
+// 1  2  3   //6  3  7
+// 4  5  6   //1  4  3   
+// 7  8  9   //9  5  7
+//result
+//35  26  34 
+//83  62  85
+//131 98 136
+#include<iostream>
+using namespace std;
+int main(){
+    int a[3][3],b[3][3],c[3][3],i,j,k;
+    cout<<"Enter first 3 by 3 matrix:\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter second 3 by 3 matrix:\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    cout<<"Result for first and second matrix:\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            c[i][j]=0;
+            for(k=0;k<=2;k++)
+            {
+                c[i][j]=c[i][j]+a[i][k]*b[k][j];
+            }
+        cout<<" "<<c[i][j];
+        }
+        cout<<"\n";
+    }
+return 0;
+}		
+
+Function:- 
+	Function are two type in c;
+	1. library function --> cout(),clrscr(),gets()...
+	2. user difine function :
+user define function are four type in c++;
+	1. simple function 
+    	2. return function 
+    	3. parameter no return function 
+    	4. parameter with return function 
+*solution mothad:- 4===>all
+ 			  3--->1,3
+
+1.Simple function:-
+//Calculate area of rectangle
+#include<iostream>
+using namespace std;
+void area(){
+    int l,b,x;
+    cout<<"Enter lenght=";
+    cin>>l;
+    cout<<"Enter breath=";
+    cin>>b;
+    x=l*b;
+    cout<<"Area of rectangle="<<x;
+}
+int main(){
+    area();
+return 0;
+}
+
+//Calculate area of triangle
+#include<iostream>
+using namespace std;
+void area(){
+    float b,h,x;
+    cout<<"Enter base=";
+    cin>>b;
+    cout<<"Enter hight";
+    cin>>h;
+    x=(b*h)/2;
+    cout<<"Area of rectangle="<<x;
+}
+int main(){
+    area();
+return 0;
+}
+
+//Calculate area of circle;
+#include<iostream>
+using namespace std;
+void area(){
+    float r,x;
+    cout<<"Enter radius=";
+    cin>>r;
+    x=3.14*r*r;
+    cout<<"Area of circle="<<x;
+}
+int main(){
+    area();
+return 0;
+}
+
+//Calculate area of circle circumference;
+#include<iostream>
+using namespace std;
+void area(){
+    float r,k;
+    cout<<"Enter radius=";
+    cin>>r;
+    k=2*3.14*r;
+    cout<<"Area of circle="<<k;
+}
+int main(){
+    area();
+return 0;
+}
+
+//Enter x value and print factorial number;
+#include<iostream>
+using namespace std;
+int factorial(){
+    int f=1,x;
+    cout<<"Enter value of x=";
+    cin>>x;
+    while(x>=1)
+    {
+        f=f*x;
+        x--;
+    }
+    cout<<"Factorial="<<f;
+}
+int main(){
+    factorial();
+return 0;
+}
+
+//Enter 10 value in array and print sum;
+#include<iostream>
+using namespace std;
+void add(){
+    int a[10],sum=0,b;
+    cout<<"Enter ten value in array=";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    for(b=0;b<=9;b++)
+    {
+        sum=sum+a[b];
+    }
+    cout<<"\ntotal sum="<<sum;
+}
+int main(){
+    add();
+return 0;
+}
+
+//Enter ten value in array and search value use with function;
+#include<iostream>
+using namespace std;
+void search(){
+    int a[10],b,f,x;
+    cout<<"Enter ten value in array=";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    cout<<"Enter search element=";
+    cin>>x;
+    for(b=0;b<=9;b++)
+    {
+        if(a[b]==x)
+        {
+            f=1;
+            break;
+        }
+    }
+    if(f==1)
+    {
+        cout<<"Element is found";
+    }
+    else{
+        cout<<"Element is not found";
+    }
+}
+int main(){
+    search();
+return 0;
+}
+
+//table of x use with function;
+#include<iostream>
+using namespace std;
+void table(){
+    int x,i,j;
+    cout<<"Enter table number=";
+    cin>>x;
+    for(i=1;i<=10;i++)
+    {
+        j=x*i;
+        cout<<x<<"x"<<i<<"="<<j;
+        cout<<endl;
+    }
+}
+int main(){
+    table();
+return 0;
+}
+
+//Enter no. and print palindrom or not using with function;
+#include<iostream>
+using namespace std;
+void palindrom(){
+    int a,x=0,r,b;
+    cout<<"Enter no.=";
+    cin>>a;
+    for(b=a;a>0;a=a/10)
+    {
+        r=a%10;
+        x=(x*10)+r;
+    }
+    if(x==b)
+    {
+        cout<<"It is palindrom";
+    }
+    else
+    {
+        cout<<"It is not palindrom";
+    }
+}
+int main(){
+    palindrom();
+return 0;
+}
+
+//Enter ten value in array and print interchange first five value to last five values;
+#include<iostream>
+using namespace std;
+void interchange(){
+    int a[10],b,t;
+    cout<<"Enter ten value in array=\n";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    for(b=0;b<=4;b++)
+    {
+        t=a[b];
+        a[b]=a[b+5];
+        a[b+5]=t;
+    }
+    cout<<"After interchange of Element:";
+    for(b=0;b<=9;b++)
+    {
+        cout<<"\n"<<a[b];
+        //cout<<endl;
+    }
+}
+int main(){
+    interchange();
+return 0;
+}
+
+//Enter string and count vowels using function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void vowel(){
+    int l=0,x,vc=0,i;
+    char b[20];
+    cout<<"Enter string=";
+    gets(b);
+    l=strlen(b);
+    for(i=0;i<l-1;i++)
+    {
+        if(b[i]=='a'|| b[i]=='e'||b[i]=='i'||b[i]=='o'||b[i]=='u')
+        {
+            vc++;
+        }
+    }
+    cout<<"Total vowel in string="<<vc;
+}
+int main(){
+    vowel();
+return 0;
+}
+
+//Enter string and print reverse string with using function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void reverse(){
+    int a,l=0;
+    char b[20];
+    cout<<"Enter string=";
+    gets(b);
+    l=strlen(b);
+    for(a=l-1;a>=0;a--)
+    {
+        cout<<b[a];
+    }
+}
+int main(){
+    reverse();
+return 0;
+}
+
+//Enter string and count -->total space,words,vowel,conentes,digits and symbols;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void count(){
+    int i,l=0,count=0,vc=0,sc=0,cc=0,dc=0,syc=0;
+    char b[20];
+    cout<<"Enter string=";
+    gets(b);
+    l=strlen(b);
+    cout<<"Total Count="<<l;
+    for(i=0;i<=l-1;i++)
+    {
+        if(b[i]>=48 && b[i]==57)
+        {
+            dc++;
+        }
+        else if(b[i]==' ')
+        {
+            sc++;
+        }
+        else if(b[i]=='a'|| b[i]=='e'||b[i]=='i'||b[i]=='o'||b[i]=='u')
+        {
+            vc++;
+        }
+        else if(b[i]>=97 && b[i]<=122)
+        {
+            cc++;
+        }
+        else{
+            syc++;
+        }
+    }
+    cout<<"\n'Total Digit="<<dc;
+    cout<<"\nTotal Space="<<sc;
+    cout<<"\nTotal Vowel="<<vc;
+    cout<<"\nTotal Consonant="<<cc;
+    cout<<"\nTotal Symbols="<<syc;
+}   
+int main(){
+    count();
+return 0;
+}
+
+//Enter string and find lenght with function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void lenght(){
+    int i;
+    char b[20];
+    cout<<"Enter string=";
+    cin>>b;
+    for(i=0;b[i]!='\0';i++)
+    {}
+    cout<<"total lenght="<<i;
+}
+int main(){
+    lenght();
+    return 0;
+}*/
+
+//Enter string and print palindrome or not with function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+int palindrome(){
+    int i,l,k=0,f=1;
+    char b[20];
+    cout<<"Enter string=";
+    cin>>b;
+    for(i=0;b[i]!=0;i++)
+    {}
+    for(i=0;i<=k-1;i++,)
+    {
+        for(l=i-1;l>=0;l--)
+        {
+            if(b[i]!=b[l])
+            {
+            cout<<"String is not palindrom";
+            f=0;
+            break;
+            }
+        }
+    }
+    if(f==1)
+    {
+        cout<<"String is palindrom";
+    }
+}
+int main(){
+    palindrome();
+return 0;
+}
+
+//Enter value and print power -->eg.-->pow(2,5)--->32;
+#include<iostream>
+using namespace std;
+void power(){
+    int a,b,p=1;
+    cout<<"Enter value=";
+    cin>>a;
+    cout<<"Enter power=";
+    cin>>b;
+    cout<<a<<"^"<<b<<"=";
+    while(b!=0)
+    {
+        p=p*a;
+        b--;
+    }
+    cout<<p;
+}
+int main(){
+    power();
+return 0;
+}
+
+//Enter value and print hexa binary code;
+#include<iostream>
+using namespace std;
+void hexa(){
+    int a[100],b,x,i=0;
+    cout<<"Enter value and check hexa binary=";
+    cin>>x;
+    for(b=x;b>0;b=b/16)
+    {
+        a[i]=b%16;
+        i++;
+    }
+    for(b=i-1;b>=0;b--)
+    {
+        if(a[b]>=10 && a[b]<=15)
+        {
+            char k=a[b]+55;
+            cout<<" "<<k;
+        }
+        else
+        {
+            cout<<a[b];
+        }
+    }
+}
+int main(){
+    hexa();
+return 0;
+}
+
+//Enter binary and print value of binary;
+#include<iostream>
+#include<math.h>
+using namespace std;
+void binary(){
+    int a[100],b,c,sum=0,x,p=0,r;
+    cout<<"Enter binary=";
+    cin>>b;
+    for(x=b;x>0;x=x/10)
+    {
+        r=x%10;
+        c=r*pow(2,p);
+        sum=sum+c;
+        p++;
+    }
+    cout<<sum;
+}
+int main(){
+    binary();   
+return 0;
+}
+
+2.Return function:-
+//Calculate area of rectangle
+#include<iostream>
+using namespace std;
+int area(){
+    int l,b,x;
+    cout<<"Enter lenght=";
+    cin>>l;
+    cout<<"Enter breath=";
+    cin>>b;
+    x=l*b;
+    return(x);
+}
+int main(){
+    int i;
+    i=area();
+    cout<<"Area of rectangle="<<i;
+return 0;
+}
+
+//Calculate area of triangle;
+#include<iostream>
+using namespace std;
+float area(){ 
+    float h,b,x;
+    cout<<"Enter base=";
+    cin>>b;
+    cout<<"Enter hight=";
+    cin>>h;
+    x=(b*h)/2;
+    return(x);    
+}
+int main(){
+    float i;
+    i=area();
+    cout<<"Area of triangle="<<i;
+return 0;
+}
+
+//Calculate area of circle;
+#include<iostream>
+using namespace std;
+float area(){
+    float r,x;
+    cout<<"Enter radius=";
+    cin>>r;
+    x=3.14*r*r;
+    return(x);
+}
+int main(){
+    float i=area();
+    cout<<"Area of circle="<<i;
+return 0;
+}
+
+//Calculate area of circle circumference;
+#include<iostream>
+using namespace std;
+float area(){
+    float r,k,x;
+    cout<<"Enter radius=";
+    cin>>r;
+    x=2*3.14*r;
+    return(x);
+}
+int main(){
+    float k;
+    k=area();
+    cout<<"Area of circle="<<k;
+return 0;
+}
+
+//Enter x value and print factorial number;
+#include<iostream>
+using namespace std;
+int factorial(){
+    int f=1,x;
+    cout<<"Enter value of x=";
+    cin>>x;
+    while(x>=1)
+    {
+        f=f*x;
+        x--;
+    }
+    return(f);
+}
+int main(){
+    int k;
+    k=factorial();
+    cout<<"Factorial="<<k;
+return 0;
+}
+
+//Enter ten value in array and print sum with function;
+#include<iostream>
+using namespace std;
+int add(){
+    int a[10],b,sum=0;
+    cout<<"Enter ten value in array=\n";
+    for(b=0;b<=9;b++)
+    {
+        cin>>b[a];
+    }
+    for(b=0;b<=9;b++)
+    {
+        sum=sum+b[a];
+    }
+    return(sum);
+}
+int main(){
+    int i;
+    i=add();
+    cout<<"sum="<<i;
+    return 0;   
+}
+
+//Enter ten value in array and search value use with function;
+#include<iostream>
+using namespace std;
+int search(){
+    int a[10],b,f,x;
+    cout<<"Enter ten value in array=";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    cout<<"Enter search element=";
+    cin>>x;
+    for(b=0;b<=9;b++)
+    {
+        if(a[b]==x)
+        {
+            f=1;
+            break;
+        }
+    }
+    return(f);
+}
+int main(){
+    int i=0;
+    i=search();
+    if(i==1)
+    {
+        cout<<"Element is found";
+    }
+    else{
+        cout<<"Element is not found";
+    }
+return 0;
+}
+
+//Enter no. and print palindrom or not using with function;
+#include<iostream>
+using namespace std;
+int  palindrom(){
+    int a,x=0,r,b,f;
+    cout<<"Enter no.=";
+    cin>>a;
+    for(b=a;a>0;a=a/10)
+    {
+        r=a%10;
+        x=(x*10)+r;
+    }
+    if(x==b){
+        f=1;
+    }
+    else{
+        f=0;
+    }
+    return(f);
+}
+int main(){
+    int i;
+    i=palindrom();
+    if(i==1)
+    {
+        cout<<"It is palindrom";
+    }
+    else
+    {
+        cout<<"It is not palindrom";
+    }
+return 0;
+}
+
+//Enter string and count vowels using function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+int vowel(){
+    int l=0,x,vc=0,i;
+    char b[20];
+    cout<<"Enter string=";
+    gets(b);
+    l=strlen(b);
+    for(i=0;i<l-1;i++)
+    {
+        if(b[i]=='a'|| b[i]=='e'||b[i]=='i'||b[i]=='o'||b[i]=='u')
+        {
+            vc++;
+        }
+    }
+    return(vc);
+}
+int main(){
+    int k;
+    k=vowel();
+    cout<<"Total vowel in string="<<k;
+return 0;
+}
+
+//Enter value and print power -->eg.-->pow(2,5)--->32;
+#include<iostream>
+using namespace std;
+int power(){
+    int a,b,p=1;
+    cout<<"Enter value=";
+    cin>>a;
+    cout<<"Enter power=";
+    cin>>b;
+    cout<<a<<"^"<<b<<"=";
+    while(b!=0)
+    {
+        p=p*a;
+        b--;
+    }
+    return(p);
+}
+int main(){
+    int k;
+    k=power();
+    cout<<k;
+return 0;
+}
+
+3.Parameter with not return:-
+//Calculate area of rectangle
+#include<iostream>
+using namespace std;
+void area(int i,int j){
+    int x;
+    x=i*j;
+    cout<<"Area of rectangle="<<x;
+}
+int main(){
+    int l,b;
+    cout<<"Enter length=";
+    cin>>l;
+    cout<<"Enter breath=";
+    cin>>b;
+    area(l,b);
+return 0;
+}
+
+//Calculate area of triangle;
+#include<iostream>
+using namespace std;
+void area(int i,int j){ 
+    float x;
+    x=(i*j)/2;
+    cout<<"Area of triangle="<<x;
+}
+int main(){
+    float h,b;
+    cout<<"Enter base=";
+    cin>>b;
+    cout<<"Enter hight=";
+    cin>>h;
+    area(b,h);
+return 0;
+}
+
+//Calculate area of circle;
+#include<iostream>
+using namespace std;
+void area(int i){
+    float x;
+    x=3.14*i*i;
+    cout<<"Area of circle="<<x;
+}
+int main(){
+    float r,x;
+    cout<<"Enter radius=";
+    cin>>r;
+    area(r);
+return 0;
+}
+
+//Calculate area of circle circumference;
+#include<iostream>
+using namespace std;
+void area(float i){
+    float x;
+    x=2*3.14*i;
+    cout<<"Area of circle="<<x;
+}
+int main(){
+    float r,k;
+    cout<<"Enter radius=";
+    cin>>r;
+    area(r);
+return 0;
+}
+
+//Enter x value and print factorial number;
+#include<iostream>
+using namespace std;
+void factorial(int i){
+    int f=1;
+    while(i>=1)
+    {
+        f=f*i;
+        i--;
+    }
+    cout<<"Factorial ="<<f;
+}
+int main(){
+    int x;
+    cout<<"Enter value of x=";
+    cin>>x;
+    factorial(x);
+return 0;
+}
+
+//Enter 10 value in array and print sum;
+#include<iostream>
+using namespace std;
+void add(int j[]){
+    int sum=0,i;
+    for(i=0;i<=9;i++)
+    {
+        sum=sum+j[i];
+    }
+    cout<<"\ntotal sum="<<sum;
+}
+int main(){
+    int a[10],b;
+    cout<<"Enter ten value in array=";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    add(a);
+return 0;
+}
+
+//Enter ten value in array and search value use with function;
+#include<iostream>
+using namespace std;
+void search(int j[]){
+    int f=0,i,x;
+    cout<<"Enter search element=";
+    cin>>x;
+    for(i=0;i<=9;i++)
+    {
+        if(j[i]==x)
+        {
+            f=1;
+            break;
+        }
+    }
+    if(f==1)
+    {
+        cout<<"Element is found";
+    }
+    else{
+        cout<<"Element is not found";
+    }
+}
+int main(){
+    int a[10],b;
+    cout<<"Enter ten value in array=";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    search(a);
+return 0;
+}
+
+//table of x use with function;
+#include<iostream>
+using namespace std;
+void table(int k){
+    int i,j;
+    for(i=1;i<=10;i++)
+    {
+        j=k*i;
+        cout<<k<<"x"<<i<<"="<<j;
+        cout<<endl;
+    }
+}
+int main(){
+    int x;
+    cout<<"Enter table number=";
+    cin>>x;
+    table(x);
+return 0;
+}
+
+//Enter no. and print palindrom or not using with function;
+#include<iostream>
+using namespace std;
+void palindrom(int i){
+    int r,b,x=0;
+    for(b=i;i>0;i=i/10)
+    {
+        r=i%10;
+        x=(x*10)+r;
+    }
+    if(x==b)
+    {
+        cout<<"It is palindrom";
+    }
+    else
+    {
+        cout<<"It is not palindrom";
+    }
+}
+int main(){
+    int a;
+    cout<<"Enter no.=";
+    cin>>a;
+    palindrom(a);
+return 0;
+}
+
+//Enter ten value in array and print interchange first five value to last five values;
+#include<iostream>
+using namespace std;
+void interchange(int i[]){
+    int b,t;
+    for(b=0;b<=4;b++)
+    {
+        t=i[b];
+        i[b]=i[b+5];
+        i[b+5]=t;
+    }
+    cout<<"After interchange of Element:";
+    for(b=0;b<=9;b++)
+    {
+        cout<<"\n"<<i[b];
+        //cout<<endl;
+    }
+}
+int main(){
+    int a[10],b,t;
+    cout<<"Enter ten value in array=\n";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    interchange(a);
+return 0;
+}
+
+//Enter string and count vowels using function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void vowel(int k,char j[]){
+    int vc=0,i;
+    for(i=0;i<=k-1;i++)
+    {
+        if(j[i]=='a'|| j[i]=='e'||j[i]=='i'||j[i]=='o'||j[i]=='u')
+        {
+            vc++;
+        }
+    }
+    cout<<"Total vowel in string="<<vc;
+}
+int main(){
+    int l=0,x,vc=0,i;
+    char b[20];
+    cout<<"Enter string=";
+    gets(b);
+    l=strlen(b);
+    vowel(l,b);
+return 0;
+}
+
+//Enter string and print reverse string with using function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void reverse(int k,char j[]){
+    int a;
+    for(a=k-1;a>=0;a--)
+    {
+        cout<<j[a];
+    }
+}
+int main(){
+    int l=0;
+    char b[20];
+    cout<<"Enter string=";
+    gets(b);
+    l=strlen(b);
+    reverse(l,b);
+return 0;
+}
+
+//Enter string and count -->total space,words,vowel,conentes,digits and symbols;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void count(int k,char j[]){
+    int count=0,vc=0,sc=0,cc=0,dc=0,syc=0,i;
+    for(i=0;i<=k-1;i++)
+    {
+        if(j[i]>=48 && j[i]==57)
+        {
+            dc++;
+        }
+        else if(j[i]==' ')
+        {
+            sc++;
+        }
+        else if(j[i]=='a'|| j[i]=='e'||j[i]=='i'||j[i]=='o'||j[i]=='u')
+        {
+            vc++;
+        }
+        else if(j[i]>=97 && j[i]<=122)
+        {
+            cc++;
+        }
+        else{
+            syc++;
+        }
+    }
+    cout<<"Total Count="<<k;
+    cout<<"\n'Total Digit="<<dc;
+    cout<<"\nTotal Space="<<sc;
+    cout<<"\nTotal Vowel="<<vc;
+    cout<<"\nTotal Consonant="<<cc;
+    cout<<"\nTotal Symbols="<<syc;
+}   
+int main(){
+    int l=0;
+    char b[20];
+    cout<<"Enter string=";
+    gets(b);
+    l=strlen(b);
+    count(l,b);
+return 0;
+}
+
+//Enter string and find lenght with function;
+#include<iostream>
+#include<string.h>
+using namespace std;
+void lenght(char j[]){
+    int i;
+    for(i=0;j[i]!='\0';i++)
+    {}
+    cout<<"total lenght="<<i;
+}
+int main(){
+    int i;
+    char b[20];
+    cout<<"Enter string=";
+    cin>>b;
+    lenght(b);
+    return 0;
+}
+
+//Enter value and print power -->eg.-->pow(2,5)--->32;
+#include<iostream>
+using namespace std;
+void power(int i, int j){
+    int p=1;
+    while(j!=0)
+    {
+        p=p*i;
+        j--;
+    }
+    cout<<p;
+}
+int main(){
+    int a,b;
+    cout<<"Enter value=";
+    cin>>a;
+    cout<<"Enter power=";
+    cin>>b;
+    cout<<a<<"^"<<b<<"=";
+    power(a,b);
+return 0;
+}
+
+4.Parameter with return:-
+//Calculate area of rectangle
+#include<iostream>
+using namespace std;
+int area(int i,int j){
+    int k;
+    k=i*j;
+    return(k);
+}
+int main(){
+    int l,b,x;
+    cout<<"Enter lenght=";
+    cin>>l;
+    cout<<"Enter breath=";
+    cin>>b;
+    x=area(l,b);
+    cout<<"Area of rectangle="<<x;
+return 0;
+}
+
+//Calculate area of triangle;
+#include<iostream>
+using namespace std;
+int area(int i,int j){ 
+    int k;
+    k=(i*j)/2;
+    return(k);    
+}
+int main(){
+    int h,b,x;
+    cout<<"Enter base=";
+    cin>>b;
+    cout<<"Enter hight=";
+    cin>>h;
+    x=area(b,h);
+    cout<<"Area of triangle="<<x;
+return 0;
+}
+
+//Calculate area of circle;
+#include<iostream>
+using namespace std;
+float area(float i){
+    float x;
+    x=3.14*i*i;
+    return(x);
+}
+int main(){
+    float r,k;
+    cout<<"Enter radius=";
+    cin>>r;
+    k=area(r);
+    cout<<"Area of circle="<<k;
+return 0;
+}
+
+//Calculate area of circle circumference;
+#include<iostream>
+using namespace std;
+float area(float i){
+    float x;
+    x=2*3.14*i;
+    return(x);
+}
+int main(){
+    float r,k;
+    cout<<"Enter radius=";
+    cin>>r;
+    k=area(r);
+    cout<<"Area of circle="<<k;
+return 0;
+}
+
+//Enter x value and print factorial number;
+#include<iostream>
+using namespace std;
+int factorial(int i){
+    int f=1;
+    while(i>=1)
+    {
+        f=f*i;
+        i--;
+    }
+    return(f);
+}
+int main(){
+    int x,k;
+    cout<<"Enter value of x=";
+    cin>>x;
+    k=factorial(x);
+    cout<<"Factorial="<<k;
+return 0;
+}
+
+//Enter 10 value in array and print sum with function
+#include<iostream>
+using namespace std;
+int add(int i[]){
+    int sum=0,j;
+    for(j=0;j<=9;j++)
+    {
+        sum=sum+i[j];
+    }
+    return(sum);
+}
+int main()
+{
+    int a[10],b,k;
+    cout<<"Enter 10 value in array=\n";
+    for(b=0;b<=9;b++)
+    {
+        cin>>b[a];
+    }
+    k=add(a);
+    cout<<"Total sum="<<k;
+    return 0;
+}
+
+//Enter 10 value in array and search value use with function
+#include<iostream>
+using namespace std;
+int search(int i[]){
+    int j,x,f=0;
+    cout<<"Enter search value=";
+    cin>>x;
+    for(j=0;j<=9;j++)
+    {
+        if(i[j]==x)
+        {
+            f=1;
+            break;
+        }
+    }
+    return(f);
+}
+int main(){
+    
+    int a[10],b,k=0;
+    cout<<"Enter 10 values in array=\n";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    k=search(a);
+    if(k==1)
+    {
+        cout<<"Element is found";
+    }
+    else
+    {
+        cout<<"Element is not found";
+    }    
+    return 0;
+}
+
+//Enter no. and print palindrome or not using with function 
+#include<iostream>
+using namespace std;
+int palindrome(int i){
+    int x=0,r;
+    for(i;i>0;i=i/10)
+    {
+        r=i%10;
+        x=(x*10)+r;
+    }
+    return(x);
+}
+int main(){
+    int a,b,z;
+    cout<<"Enter No.=";
+    cin>>a;
+    b=a;
+    z=palindrome(a);
+    if(z==b)
+    {
+        cout<<"it is palindrome number";
+    }
+    else
+    {
+        cout<<"it is not palindrome number";
+    }
+    return 0;
+}
+
+//enter string and count vowels using functions;
+#include<iostream>
+#include<string.h>
+using namespace std;
+int vowel(int j, char k[]){
+    int i,vc=0;
+    for(i=0;i<=j-1;i++)
+    {
+        if(k[i]=='a'||k[i]=='e'|| k[i]=='i'|| k[i]=='o'|| k[i]=='u')
+        {
+            vc++;    
+        }
+    }
+    return(vc);
+}
+int main(){
+    int l=0,x;
+    char b[20];
+    cout<<"Enter sentences=";
+    gets(b);
+    l=strlen(b);
+    x=vowel(l,b);
+    cout<<"Total vowel="<<x;
+    return 0;
+}
+
+//Factorial of x using recursion;
+#include<iostream>
+using namespace std;
+int factorial(int i)
+{
+    cout<<"Calling factorial"<<i;
+    cout<<endl;
+    if(i==1 || i==0)
+    {
+        return 1;
+    }
+    else{
+        return i*factorial(i-1);
+    }
+
+}
+int main(){
+    int a=5;
+    cout<<"The value of factorial="<<a<<factorial(a);
+return 0;
+}
+
+//print fibonacci series using recursion ;
+#include<iostream>
+using namespace std;
+int fibo(int a)
+{
+    if(a==1 || a==0)
+    {
+        return a;
+    }
+    else
+    {
+        return fibo(a-1) + fibo(a-2);
+    }   
+}
+int main(){
+    int x,i;
+    cout<<"Enter terms=";
+    cin>>x;
+    for(i=0;i<x;i++)
+    {
+        cout<<"\t"<<fibo(i);
+    }
+    return 0;
+}
+
+//Enter value and print power -->eg.-->pow(2,5)--->32;
+#include<iostream>
+using namespace std;
+int power(int i,int j){ 
+    int p=1;
+    while(j!=0)
+    {
+        p=p*i;
+        j--;
+    }
+    return(p);
+}
+int main(){
+    int a,b,k;
+    cout<<"Enter value=";
+    cin>>a;
+    cout<<"Enter power=";
+    cin>>b;
+    cout<<a<<"^"<<b<<"=";
+    k=power(a,b);
+    cout<<k;
+return 0;
+}
+
+structure:-
+
+// enter day, month and year and print date 
+#include<iostream>
+using namespace std;
+struct date{
+    int d,m,y;
+};
+int main(){
+    struct date i;
+    cout<<"Enter day,month,year=";
+    cin>>i.d>>i.m>>i.y;
+    cout<<"Date="<<i.d<<"/"<<i.m<<"/"<<i.y;
+return 0;
+}
+
+// enter roll, name and five subject marks of a student and find total, percenta and division
+#include<iostream>
+using namespace std;
+struct num{
+    int r,m,p,c,h,e,marks,div;
+    float per;
+    char n[20];
+};
+int main(){
+    struct num i;
+    cout<<"Enter roll no.=";
+    cin>>i.r;
+    cout<<"Maths num=";
+    cin>>i.m;
+    cout<<"Physics num=";
+    cin>>i.p;
+    cout<<"Chemistry num=";
+    cin>>i.c;
+    cout<<"Hindi num=";
+    cin>>i.h;
+    cout<<"English num=";
+    cin>>i.e;
+    cout<<"Enter name=";
+    cin.getline(i.n,20);
+    cin.ignore();
+    i.marks=i.m+i.p+i.c+i.h+i.e;
+    cout<<"Total marks="<<i.marks<<endl;
+
+    i.per=(float)i.marks/5;
+    cout<<"Percentage="<<i.per<<endl;
+    if(i.per>=60)
+    {
+        cout<<"1st division";
+    }
+    else if(i.per>=45)
+    {
+        cout<<"2nd division";
+    }
+    else if(i.per>=38)
+    {
+        cout<<"3rd division";
+    }
+    else
+    {
+        cout<<"Fail";
+    }
+return 0;
+}
+
+// enter code, name, and salary of employee and find hra,da,ta,gs,pf,ns
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct salary{
+    int salary,hra,da,ta,gs,pf,ns;
+};
+int main(){
+    struct salary i[5];
+    int j;
+    for(j=0;j<=4;j++){
+    cout<<"Enter salary=";
+    cin>>i[j].salary;
+
+    i[j].hra=(12*i[j].salary)/100;
+    i[j].da=(20*i[j].salary)/100;
+    i[j].ta=(5*i[j].salary)/100;
+    i[j].pf=(15*i[j].salary)/100;
+    
+    i[j].gs=i[j].salary+i[j].hra+i[j].da+i[j].ta;
+    i[j].ns=i[j].gs-i[j].pf;
+    }
+    for(int k=0;k<=4;k++){
+    cout<<"Salary="<<i[k].salary<<endl;
+    cout<<"house rent allowence="<<i[k].hra<<endl;
+    cout<<"daily allowence="<<i[k].da<<endl;
+    cout<<"total ="<<i[k].ta<<endl;
+    cout<<"provient fund="<<i[k].pf<<endl;
+    cout<<"Gross salary="<<i[k].gs<<endl;
+    cout<<"Net salary="<<i[k].ns<<endl;
+    cout<<"------------------------------"<<endl;
+    }
+return 0;
+}
+
+// enter roll, name and five subject marks of a student and find total, percenta and division
+#include<iostream>
+#include<string.h>
+using namespace std;
+struct num{
+    int r,m,p,c,h,e,marks;
+    float per;
+    char div[20];
+};
+int main(){
+    struct num i[5];
+    int j;
+    for(j=0;j<=1;j++)
+    {
+    cout<<"Enter roll no.=";
+    cin>>i[j].r;
+    cout<<"Maths num=";
+    cin>>i[j].m;
+    cout<<"Physics num=";
+    cin>>i[j].p;
+    cout<<"Chemistry num=";
+    cin>>i[j].c;
+    cout<<"Hindi num=";
+    cin>>i[j].h;
+    cout<<"English num=";
+    cin>>i[j].e;
+    i[j].marks=i[j].m+i[j].p+i[j].c+i[j].h+i[j].e;
+    cout<<"Total marks="<<i[j].marks<<endl;
+    i[j].per=(float)i[j].marks/5;
+    cout<<"Percentage="<<i[j].per<<endl;
+    if(i[j].per>=60)
+    {
+        strcpy(i[j].div,"1st");
+    }
+    else if(i[j].per<=60)
+    {
+        strcpy(i[j].div,"2nd");
+    }
+    else if(i[j].per>=40)
+    {
+        strcpy(i[j].div,"3rd");
+    }
+    else
+    {
+        strcpy(i[j].div,"Fail");
+    }
+}
+    cout<<"\t\t-:Table Of Formate:-\t"<<endl;
+    cout<<"roll\t\ttotal\t\tpercentage\t\tdivision"<<endl;
+    cout<<"......................................................................."<<endl;
+    for(j=0;j<=1;j++)
+    {
+    cout<<i[j].r<<"\t\t"<<i[j].marks<<"\t\t"<<i[j].per<<"\t\t\t"<<i[j].div<<endl;
+    }
+return 0;
+}
+
+//enter your current date and enter your birth date and print how many year are old you
+#include<iostream>
+using namespace std;
+struct date
+{
+    int x,y,z;
+};
+int main(){
+    struct date d,d1,age;
+    cout<<"Enter current date=";
+    cin>>d.x>>d.y>>d.z;
+    cout<<"Enter birth date=";
+    cin>>d1.x>>d1.y>>d1.z;
+    age.x=d.x-d1.x;
+    age.y=d.y-d1.y;
+    age.z=d.z-d1.z;
+    
+    if(age.x<0)
+    {
+        age.x=age.x+30;
+        age.y=age.y-1;
+    }
+    if(age.y<0)
+    {
+        age.y=age.y+12;
+        age.z=age.z-1;
+    }
+    cout<<"your age="<<age.z<<" year "<<age.y<<" month "<<age.x<<" days"<<endl;
+    return 0;
+}
+
+Class:-
+1. a class is a backbone of object oriented programming
+2. a class is a collection of variables and methods related to a particular object
+
+// wap to find area of a rectangle
+#include<iostream>
+using namespace std;
+class rectangle
+{
+    private:
+    int l,b,a;
+    public:
+    void setval()  // this method is only setting the members variable of the class
+    {
+        l=5;
+        b=10;
+    }
+    void getarea()  // this method is actually calculating the area of rectangle
+    {
+        a=l*b;
+    }
+    void display() // this method is actually printing  the area of rectangle
+    {
+        cout<<"area of rectangle is "<<a<<endl;
+    }
+};
+int main()
+{
+    rectangle object;  // create an object of class rectangle
+    object.setval();  // call the function setval of class rectangle
+    object.getarea(); // call the function getarea of the class rectangle
+    object.display();  // we can call this method becoz it is public
+    return(0);
+}
+
+1. a class is a backbone of object oriented programming
+2. a class is a collection of variables and methods related to a particular object
+3. a structure is just a collection of variables (different data types) whereas a class is a collection of methods and variables
+4. all of the activitives/processes should be in a seperate function of the class
+5. all of the member variables of a class should be private and methods may be public
+6. all of the functions related to class must be inside the class
+7. a class should be created in a way that it can be reused any number of times in efficient manner
+
+// below is an example of class as a collection of variables (just like strcuture)
+#include<iostream>
+using namespace std;
+class rectangle
+{
+    private:
+    int l,b,a;
+    public:
+    void setval()  // this method is only setting the members variable of the class
+    {
+        l=5;
+        b=10;
+    }
+    void getarea()  // this method is actually calculating the area of rectangle
+    {
+        a=l*b;
+    }
+    void display() // this method is actually printing  the area of rectangle
+    {
+        cout<<"area of rectangle is "<<a<<endl;
+    }
+};
+int main()
+{
+    rectangle object;  // create an object of class rectangle
+    object.setval();  // call the function setval of class rectangle
+    object.getarea(); // call the function getarea of the class rectangle
+    object.display();  // we can call this method becoz it is public
+    return(0);
+}
+
+// wap to find area of a rectangle
+// 1. a class is a backbone of object oriented programming
+// 2. a class is a collection of variables and methods related to a particular object
+#include<iostream>
+using namespace std;
+class rectangle
+{
+    public:
+    int l,b,a;
+    void setval()  // this method is only setting the members variable of the class
+    {
+        l=5;
+        b=10;
+    }
+};
+int main()
+{
+    rectangle object;  // create an object of class rectangle
+    object.setval();  // call the function setval of class rectangle
+    object.a=object.l*object.b;
+    cout<<"Area of rectangle="<<object.a;
+    return(0);
+}
+
+// 1. a class is a backbone of object oriented programming
+// 2. a class is a collection of variables and methods related to a particular object
+// 3. a structure is just a collection of variables (different data types) whereas a class is a collection of methods and variables
+//4. all of the activitives/processes should be in a seperate function of the class
+#include<iostream>
+using namespace std;
+class rectangle
+{
+    public:
+    int l,b,a;
+    void setval()  // this method is only setting the members variable of the class
+    {
+        l=5;
+        b=10;
+    }
+    void getarea()  // this method is actually calculating the area of rectangle
+    {
+        a=l*b;
+    }
+};
+int main()
+{
+    rectangle object;  // create an object of class rectangle
+    object.setval();  // call the function setval of class rectangle
+    object.getarea(); // call the function getarea of the class rectangle
+    cout<<"Area of rectangle="<<object.a<<endl;
+    return 0;
+}
+
+1. a class is a backbone of object oriented programming
+2. a class is a collection of variables and methods related to a particular object
+3. a structure is just a collection of variables (different data types) whereas a class is a collection of methods and variables
+4. all of the activitives/processes should be in a seperate function of the class
+5. all of the member variables of a class should be private and methods may be public
+6. all of the functions related to class must be inside the class
+7. a class should be created in a way that it can be reused any number of times in efficient manner
+
+// below is an example of class as a collection of variables (just like strcuture)
+#include<iostream>
+using namespace std;
+class rectangle
+{
+    private:
+    int l,b,a;
+    public:
+    void setval()  // this method is only setting the members variable of the class
+    {
+        l=5;
+        b=10;
+    }
+    void getarea()  // this method is actually calculating the area of rectangle
+    {
+        a=l*b;
+    }
+    void display() // this method is actually printing  the area of rectangle
+    {
+        cout<<"area of rectangle is "<<a<<endl;
+    }
+};
+
+int main()
+{
+    rectangle object;  // create an object of class rectangle
+    object.setval();  // call the function setval of class rectangle
+    object.getarea(); // call the function getarea of the class rectangle
+    object.display();  // we can call this method becoz it is public
+    return(0);
+}
+
+//enter lenght and breadth to find area of a rectangle 
+#include<iostream>
+using namespace std;
+class rectangle
+{
+    private:
+    int l,b,a;
+    public:
+    void setval(int x,int y)
+    {
+        l=x;
+        b=y;
+    }
+    void getarea()  // this method is actually calculating the area of rectangle
+    {
+        a=l*b;
+    }
+    void display() // this method is actually printing  the area of rectangle
+    {
+        cout<<"area of rectangle is "<<a<<endl;
+    }
+};
+int main()
+{
+    int l,b;
+    rectangle object;  // create an object of class rectangle
+    cout<<"Enter lenght="<<endl;
+    cin>>l;
+    cout<<"Enter breadth="<<endl;
+    cin>>b;
+    object.setval(l,b);
+    object.getarea(); // call the function getarea of the class rectangle
+    object.display();  // we can call this method becoz it is public
+    return(0);
+}
+
+//Enter radius and find circle and circumference;
+#include<iostream>
+using namespace std;
+class circle{
+    private:
+    float r,a,b;
+    public:
+    void setval(float x)
+    {
+        r=x;
+    }
+    void getarea()
+    {
+        a=3.14*r*r;
+    }
+    void getcircle()
+    {
+        b=2*3.14*r;
+    }
+    void display()
+    {
+        cout<<"Area of circle is "<<a<<endl;
+        cout<<"Area of circle circumference is "<<b<<endl;
+    }
+};
+int main(){
+    circle object;
+    float r;
+    cout<<"Enter radius="<<endl;
+    cin>>r;
+    object.setval(r);
+    object.getarea();
+    object.getcircle();
+    object.display();
+return 0;
+}
+
+//Enter qty rate year and find simple interest and compound
+#include<iostream>
+#include<math.h>
+using namespace std;
+class si{
+    private:
+    float p,r,t,si,ci;
+    public:
+    void setval(float i, float j, float k)
+    {
+        p=i;
+        r=j;
+        t=k;
+    }
+    void getsi()
+    {
+        si=(p*r*t)/100;
+    }
+    void getci()
+    {
+        ci=p*pow((1+r/100),t)-p;
+    }
+    void display()
+    {
+        cout<<"Simple interest is "<<si<<endl;
+        cout<<"Compound interest is "<<ci<<endl;
+    }
+};
+int main(){
+    float p,r,t;
+    si object;
+    cout<<"Enter principal=";
+    cin>>p;
+    cout<<"Enter rate=";
+    cin>>r;
+    cout<<"Enter time=";
+    cin>>t;
+    object.setval(p,r,t);
+    object.getsi();
+    object.getci();
+    object.display();
+return 0;
+}
+
+// enter code, name, and salary of employee and find hra,da,ta,gs,pf,ns
+#include<iostream>
+#include<string.h>
+using namespace std;
+class salary{
+    private:
+    int salary,hra,da,ta,gs,pf,ns;
+    char n[20];
+    public: 
+    void setval(int i,char j[])
+    {
+        salary=i;
+        strcpy(n,j);
+    }
+    void gethra()
+    {
+        hra=(12*salary)/100;
+    }
+    void getda()
+    {
+        da=(20*salary)/100;
+    }
+    void getta()
+    {
+        ta=(5*salary)/100;
+    }
+    void getpf()
+    {
+       pf=(15*salary)/100;
+    } 
+    void getgs()
+    {
+        gs=salary+hra+da+ta;
+    }
+    void getns()
+    {
+        ns=gs-pf;
+    }
+    void display()
+    {
+        cout<<"Name="<<n<<endl;
+        cout<<"Salary="<<salary<<endl;
+        cout<<"House Rent Allowence="<<hra<<endl;
+        cout<<"Daily Allowence="<<da<<endl;
+        cout<<"Total="<<ta<<endl;
+        cout<<"Provient Fund="<<pf<<endl;
+        cout<<"Gross Salary="<<gs<<endl;
+        cout<<"Net Salary="<<ns<<endl;
+    }
+};
+int main(){
+    salary object;
+    int salary,hra,da,ta,gs,pf,ns;
+    char n[20];
+    cout<<"Enter Name=";
+    cin.getline(n,20);
+    cout<<"Enter salary=";
+    cin>>salary;
+    object.setval(salary,n);
+    object.gethra();
+    object.getda();
+    object.getta();
+    object.getpf();
+    object.getgs();
+    object.getns();
+    object.display();
+return 0;
+}
+
+// enter roll, name and five subject marks of a student and find total, percenta and division
+#include<iostream>
+#include<string.h>
+using namespace std;
+class marks{
+    private:
+    int r,m,p,c,h,e,marks;
+    char div[20],n[20];
+    float per;
+    public:
+    void setval(int i,int j,int k,int x,int y,int z,char a[])
+    {
+        r=i;
+        m=j;
+        p=k;
+        c=x;
+        h=y;
+        e=z;
+        strcpy(n,a);
+    }
+    void getmarks()
+    {
+        marks=m+p+c+h+e;
+    }
+    void getper()
+    {
+        per=(float)marks/5;
+    }
+    void getdiv()
+    {
+        if(per>=60)
+        {
+            strcpy(div,"1st");
+        }
+        else if(per<60)
+        {
+            strcpy(div,"2nd");
+        }
+        else if(per>=40)
+        {
+            strcpy(div,"3rd");
+        }
+        else
+        {
+            strcpy(div,"Fail");
+        }
+    }
+    void display()
+    {
+        cout<<"------------------------------";
+        cout<<"Name        :"<<n<<endl;
+        cout<<"Roll no.    :"<<r<<endl;
+        cout<<"Total Marks :"<<marks<<endl;
+        cout<<"Percentage  :"<<per<<endl;
+        cout<<"Division    :"<<div<<endl;
+    }
+};
+int main(){
+    marks object;
+    int r,m,p,c,h,e;
+    char n[20];
+    cout<<"Enter Name=";
+    cin.getline(n,20);
+    cin.ignore();
+    cout<<"Enter Roll no.=";
+    cin>>r;
+    cout<<"Maths=";
+    cin>>m;
+    cout<<"Physice=";
+    cin>>p;
+    cout<<"Chemistry=";
+    cin>>c;
+    cout<<"Hindi=";
+    cin>>h;
+    cout<<"English=";
+    cin>>e;
+    object.setval(r,m,p,c,h,e,n);
+    object.getmarks();
+    object.getper();
+    object.getdiv();
+    object.display();
+return 0;
+}
+
+//Enter three value and print sum,avg,min,max;
+#include<iostream>
+using namespace std;
+class add{
+    private:
+    int a,b,c,sum=0,avg,min,max;
+    public:
+    void setval(int i, int j, int k)
+    {
+        a=i;
+        b=j;
+        c=k;
+    }
+    void getsum()
+    {
+        sum=a+b+c;
+    }
+    void getavg()
+    {
+        avg=sum/3;
+    }
+    void getmax()
+    {
+        if(a>b)
+        {
+            if(a>c)
+            max=a;
+            else
+            max=c;
+        }
+        else
+        {
+            if(b>c)
+            max=b;
+            else
+            max=c;
+        }
+    }
+    void getmin()
+    {
+        if(a<b)
+        {
+            if(a<c)
+            min=a;
+            else
+            min=c;
+        }
+        else
+        {
+            if(b<c)
+            min=b;
+            else
+            min=c;
+        }
+    }
+    void display()
+    {
+        cout<<"Sum is="<<sum<<endl;
+        cout<<"Avg is="<<avg<<endl;
+        cout<<"Max is="<<max<<endl;
+        cout<<"Min is="<<min<<endl;
+    }
+};
+int main(){
+    add object;  
+    int a,b,c;
+    cout<<"Enter three value=";
+    cin>>a>>b>>c;
+    object.setval(a,b,c);
+    object.getsum();
+    object.getavg();
+    object.getmax();
+    object.getmin();
+    object.display();
+return 0;
+}
+
+//Enter x value and find factorial;
+#include<iostream>
+using namespace std;
+class fact{
+    private:
+    int f=1,x;
+    public:
+    void setval(int a)
+    {
+        x=a;
+    }
+    void getfact()
+    {
+        while(x>=1)
+        {
+            f=f*x;
+            cout<<x<<endl;
+            x--;
+        }
+    }
+    void display()
+    {
+        cout<<"Factorital of "<<f;
+    }
+};
+int main(){
+    fact object;
+    int x;
+    cout<<"Enter number=";
+    cin>>x;
+    object.setval(x);/
+    object.getfact();
+    object.display();
+return 0;
+}
+
+//Enter three value and print sum,avg,min,max;
+#include<iostream>
+using namespace std;
+class add{
+    private:
+    int a[10],b,sum=0,avg,min,max;
+    public:
+    void setval(int i[])
+    {
+        for(b=0;b<=9;b++)
+        {
+            a[b]=i[b];
+        }
+    }
+    void getsum()
+    {
+        for(b=0;b<=9;b++)
+        {
+            sum=sum+a[b];
+        }
+    }
+    void getavg()
+    {
+        avg=sum/3;
+    }
+    void getmax()
+    {
+        max=a[0];
+        for(b=0;b<=9;b++)
+        {
+            if(a[b]>max)
+            {
+                max=a[b];
+            }
+        }
+    }
+    void getmin()
+    {
+        min=a[0];
+        for(b=0;b<=9;b++)
+        {
+            if(a[b]<min)
+            {
+                min=a[b];
+            }
+        }
+    }
+    void display()
+    {
+        cout<<"Sum is="<<sum<<endl;
+        cout<<"Avg is="<<avg<<endl;
+        cout<<"Max is="<<max<<endl;
+        cout<<"Min is="<<min<<endl;
+    }
+};
+int main(){
+    add object;  
+    int a[10],b;
+    cout<<"Enter ten value =";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    object.setval(a);
+    object.getsum();
+    object.getavg();
+    object.getmax();
+    object.getmin();
+    object.display();
+return 0;
+}
+
+//enter ten value and insert new element in arrat using class function;
+#include<iostream>
+using namespace std;
+class insert{
+    private:
+    int a[11],b,p,c;
+    public:
+    void setval(int i[], int j, int k)
+    {
+        for(b=0;b<=9;b++)
+        {
+            a[b]=i[b];
+        }
+        p=j;
+        c=k;
+    }
+    void getinsert()
+    {
+        for(b=9;b>=p-1;b--)
+        {
+            a[b+1]=a[b];
+        }   
+        a[p-1]=c;
+    }
+    void display()
+    {
+        for(b=0;b<=10;b++)
+        {
+            cout<<a[b]<<endl;
+        }
+    }
+};
+int main(){
+    insert object;
+    int a[11],b,p,c;
+    cout<<"Enter ten value =";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    cout<<"Enter Position =";
+    cin>>p;
+    cout<<"Enter Insert =";
+    cin>>c;
+    object.setval(a,p,c);
+    object.getinsert();
+    object.display();
+return 0;
+}
+
+//Enter ten value and delete element in array using class function;
+#include<iostream>
+using namespace std;
+class del{
+    private:
+    int a[10],b,d,f=0,z;
+    public:
+    void setval(int i[], int j)
+    {
+        for(b=0;b<=9;b++)
+        {
+            a[b]=i[b];
+        }
+        d=j;
+    }
+    void getdelete()
+    {
+        for(b=0;b<=9;b++)
+	    {
+		    if(a[b]==d)
+	    	{   
+		        for(z=b;z<=9;z++)
+		        {
+			        a[z]=a[z+1];
+		        }
+                break;
+		    }
+	    }
+            
+    }
+	void display()
+    {
+         cout<<"Now latest array are=\n";
+		    for(b=0;b<=8;b++)
+		    {
+			    cout<<a[b]<<endl;
+		    }
+    }
+};
+int main(){
+    del object;
+    int a[10],b,d;
+    cout<<"Enter ten value =";
+    for(b=0;b<=9;b++){
+        cin>>a[b];
+    }
+    cout<<"Enter a no. you want to delete =";
+    cin>>d;
+    object.setval(a,d);
+    object.getdelete();
+    object.display();
+return 0;
+}
+
+//Enter ten value and duplicatevalue zero in array using function;
+#include<iostream>
+using namespace std;
+class same{
+    private:
+    int a[10],b,i;
+    public:
+    void setval(int j[])
+    {
+        for(b=0;b<=9;b++)
+        {
+            a[b]=j[b];
+        }
+    }
+    void getduplicate()
+    {
+        for(b=0;b<=9;b++)
+        {
+            for(i=b+1;i<=9;i++)
+            {
+                if(a[b]==a[i])
+                {
+                    a[i]=0;
+                }
+            }
+        }
+    }
+    void display()
+    {
+        for(b=0;b<=9;b++)
+	    {
+		    cout<<a[b]<<endl;
+	    }
+    }
+};
+int main(){
+    same object;
+    int a[10],b;
+    cout<<"Enter ten value =";
+    for(b=0;b<=9;b++)
+    {
+        cin>>a[b];
+    }
+    object.setval(a);
+    object.getduplicate();
+    object.display();
+return 0;
+}
+
+//Enter ten value and search element using class;
+#include<iostream>
+using namespace std;
+class search{
+    private:
+    int a[10],b,s,f=0;
+    public:
+    void setval(int i[],int j)
+    {
+        for(b=0;b<10;b++)
+        {
+            a[b]=i[b];
+        }
+        s=j;
+    }
+    void getfind()
+    {
+        for(b=0;b<10;b++)
+        {
+            if(a[b]==s)
+            {
+                f=1;
+                break;
+            }
+        }
+    }
+    void display()
+    {
+        if(f==1)
+        {
+            cout<<"Element is found"<<endl;
+        }
+        else
+        {
+            cout<<"Element is not found"<<endl;
+        }
+    }
+};
+int main(){
+    search object;
+    int a[10],b,s;
+    cout<<"Enter ten value in array:"<<endl;
+    for(b=0;b<10;b++)
+    {
+        cin>>a[b];
+    }
+    cout<<"Enter search element:"<<endl;
+    cin>>s;
+    object.setval(a,s);
+    object.getfind();
+    object.display();
+return 0;
+}
+
+Banking application
+ac no.=
+name=
+ac type=
+balance=
+withdraw=
+deposit=
+print them
+
+actype   
+1. saving - min bal 5000                     deposit limit  - 2500
+2. current - min bal 20000                   deposit limit - 5000
+3. fixed - no partial withdraw facility      deposit limit - 10000 
+
+#include<iostream>
+#include<string.h>
+using namespace std;
+class Bank {
+    private:
+        int acno;
+        long int amt;
+        char name[30],accounttype[30];
+        long balance;
+    public:
+    void OpenAccount()
+    {
+        cout<<"Enter Account Number:";
+        cin >> acno;
+        cout<<"Account Type:";
+        cin>>accounttype;
+        cout<<"Enter Name:";
+        cin>>name;
+        cout<<"Enter Balance:";
+        cin>>balance;
+        cout<<"---------------------------\n";
+    }
+    void getShowAccount()
+    {
+        cout<<"Account Number: "<< acno<<endl;
+        cout<<"Account Type: "<<accounttype<<endl;
+        cout<<"Name: "<<name<<endl;
+        cout<<"Balance: "<<balance<<endl;
+        cout<<"---------------------------\n";
+    }
+    void getDeposit(int amt)
+    {
+        if(strcmp(accounttype,"saving")==0)
+        {
+            if(amt<=2500)
+            {
+                balance=balance+amt;
+            }
+            else
+            {
+                cout<<"You can not enter 2500 below amount to deposit this account";
+            }
+        }
+
+        else if(strcmp(accounttype,"current")==0)
+        {
+            if(amt<=5000)
+            {
+                balance=balance+amt;
+            }
+            else
+            {
+                cout<<"You can not enter 5000 below amount to deposit this account";
+            }
+        }
+
+        else if(strcmp(accounttype,"fixed")==0)
+        {
+            if(amt<=10000)
+            {
+                balance=balance+amt;
+            }
+            else
+            {
+                cout<<"You can not enter 10000 below amount to deposit this account";
+            }
+        }
+    }
+    void getWithdrawal(int amt)
+    {
+        if(strcmp(accounttype,"saving")==0)
+        {
+            if(balance-amt>=5000)
+            {   
+                balance = balance-amt;
+            }
+            else
+            {
+                cout<<"Not Sufficient Balance For Withdraw";
+            }
+        }
+        
+        else if(strcmp(accounttype,"current")==0)
+        {
+            if(balance-amt>=2000)
+            {
+                balance = balance-amt;
+            }
+            else
+            {
+                cout<<"Not Sufficient Balance For Withdraw";
+            }
+        }
+
+        else if(strcmp(accounttype,"fixed")==0)
+        {
+            cout<<"No Partial Withdraw Facility";
+        }
+    }
+};
+
+// main code
+int main()
+{
+    Bank object;
+    int found=0,a,ch;
+    long int amt; 
+        object.OpenAccount();
+    do{
+        // display options
+        cout<<"\n\tMAIN MANU\n\n1:Show Account Details\n2:Deposit\n3:Withdraw\n4:Exit"<<endl;
+
+        cout<<"Please input your choice: ";
+        cin>>ch;
+
+        switch(ch){
+        case 1: // displating account info
+                object.getShowAccount();
+                break;
+        case 2: // deposit operation
+                cout<<"Enter Amount you want to deposit? ";
+                cin>>amt;
+                object.getDeposit(amt);
+                break;
+        case 3: // withdraw operation
+                cout<<"Enter Amount you want to withdraw? ";
+                cin>>amt;
+                object.getWithdrawal(amt);
+                break;
+        case 4: // exit
+                cout<<"Have a nice day"<<endl;
+                break;
+        default:
+                cout<<"Wrong Option"<<endl;
+        }
+    } while(ch!=4);
+    return 0;
+}
+
+Class in Array:-
+// enter 10 values in array and count a. perfect   b. prime   c. palindrome   d. armstrong 
+#include<iostream>
+using namespace std;
+class count {
+    private:
+    int a[10],b,c,i,p,r,f,x;
+    int count=0,sum=0,primecount=0,perfectcount=0,palindromecount=0,armstrongcount=0;
+    public:
+    void setval(int m[])
+    {
+        for(b=0;b<10;b++)
+        {
+            a[b]=m[b];
+        }
+    }
+    void getprime()
+    {
+        for(b=0;b<10;b++)
+        {
+            i=0;
+            for(c=2;c<a[b];c++)
+            {
+                if(a[b]%c==0)
+                {
+                    i=1;
+                    break;                    
+                }
+            }
+            if(i==0)
+            {
+                primecount++; 
+            }
+        }
+    }
+    void getperfect()
+    {
+        for(b=0;b<=9;b++)
+	    {
+		    sum=0;
+		    for(c=1;c<a[b];c++)
+		    {
+			    if(a[b]%c==0)
+			    {
+				    sum=sum+c;
+			    }
+		    }
+		    if(sum==a[b])
+		    {
+			    perfectcount++;
+		    }
+	    }
+    }
+    void getpalindrome()
+    {
+        for(b=0;b<=9;b++)
+	    {
+    		i=0;
+	    	for(c=a[b];c>0;c=c/10)
+		    {
+ 			    r=c%10;
+			    i=(i*10)+r;
+		    }
+		    if(i==a[b])
+		    {
+			    palindromecount++;
+		    }
+	    }
+    }
+    void getarmstrong()
+    {
+        for(b=0;b<=9;b++)
+	    {
+		    count=0;
+		    for(i=a[b];i>0;i=i/10)
+		    {
+    			count++;
+	    	}
+    		sum=0;
+	    	for(x=a[b];x!=0;x=x/10)
+    		{
+			    r=x%10;
+			    f=1;
+			    p=count;
+			    while(p>=1)
+			    {
+				    f=f*r;
+				    p--;
+			    }
+			    sum=sum+f;
+		    }
+		    if(sum==a[b])
+		    {
+			    armstrongcount++;
+			}
+	    }
+    }
+    void display()
+    {
+        cout<<"Total Prime No: "<<primecount<<endl;
+        cout<<"Total Perfect No: "<<perfectcount<<endl;
+        cout<<"Total Palindrome No: "<<palindromecount<<endl;
+        cout<<"Total Armstrong No: "<<armstrongcount<<endl;
+    }
+};
+int main(){
+    count object;
+    int a[10],b;
+    cout<<"Enter 10 value in array: "<<endl;
+    for(b=0;b<10;b++)
+    {
+        cin>>a[b];
+    }
+    object.setval(a);
+    object.getprime();
+    object.getperfect();
+    object.getpalindrome();
+    object.getarmstrong();
+    object.display();
+return 0;
+}
+
+// enter roll, name and five subject marks of a student and find total, percenta and division for five student
+#include<iostream>
+#include<string.h>
+using namespace std;
+class marks{
+    private:
+    int r,marks[5],i,total;
+    char div[20],n[20];
+    public:
+    float per;
+    void setval(int i, int k[], char a[])
+    {
+        int q;
+        r=i;
+        for(q=0;q<5;q++)
+        {
+            marks[q]=k[q];
+        }
+        strcpy(n,a);
+    }
+    void getmarks()            
+    {
+        total=0;
+        for(i=0;i<=4;i++)
+        {
+        total=total+marks[i];
+        }
+    }
+    void getper()
+    {
+        per=(float)total/5;   
+    }
+    void getdiv()
+    {
+        if(per>=60)
+        {
+            strcpy(div,"1st");
+        }
+        else if(per<60)
+        {
+            strcpy(div,"2nd");
+        }
+        else if(per>=40)
+        {
+            strcpy(div,"3rd");
+        }
+        else
+        {
+            strcpy(div,"Fail");
+        }
+    }
+    void display()
+    {   
+        cout<<r<<"\t\t"<<n<<"\t\t"<<total<<"\t\t"<<per<<"\t\t"<<div;
+    }
+};
+int main(){
+    marks object[5];   // this statement is create an array of objects
+    marks faltu;
+    int marks[5],r,i,j,t;
+    char n[20];
+    float per[5];
+    for(i=0;i<3;i++)
+    {
+    cout<<"Enter Roll no.=";
+    cin>>r;
+    cout<<"enter five subject marks\n";
+     for(j=0;j<=4;j++)
+     {
+     cin>>marks[j];
+     }
+    cout<<"Enter Name=";
+    cin>>n;
+    
+    object[i].setval(r,marks,n);
+    object[i].getmarks();
+    object[i].getper();
+    object[i].getdiv();
+    }
+
+    for(i=0;i<3;i++)
+    {
+        for(j=i+1;j<3;j++)
+        {
+            if(object[i].per<object[j].per)
+            { 
+                faltu=object[i];
+                object[i]=object[j];
+                object[j]=faltu;
+            }
+        }
+        
+    }
+    cout<<"\t\t-:Table Of Formate:-\t"<<endl;
+    cout<<"-------------------------------------------------------\n";
+    cout<<"Roll\t\tName\t\tTotal\t\tPercentage\tDivision\tRank\n";
+    cout<<"-------------------------------------------------------\n";
+    
+    for(i=0;i<3;i++)
+    {
+    object[i].display();
+    cout<<"\t"<<i+1<<endl;
+    }
+return 0;
+}
+
+// enter code, name, and salary of employee and find hra,da,ta,gs,pf,ns
+#include<iostream>
+#include<string.h>
+using namespace std;
+class income{
+    private:
+    int salary,hra,da,ta;
+    char n[20];
+    public:
+    int gs,pf,ns;
+    void setval(int i, char k[])
+    {
+        salary=i;
+        strcpy(n,k);
+    }
+    void gethra()
+    {
+        hra=(12*salary)/100;
+    }
+    void getda()
+    {
+        da=(20*salary)/100;
+    }
+    void getta()
+    {
+        ta=(5*salary)/100;
+    }
+    void getgs()
+    {
+        gs=salary+hra+da+ta;
+    }
+    void getpf()
+    {
+        pf=(15*salary)/100;
+    }
+    void getns()
+    {
+        ns=gs-pf;
+    }
+    void display()
+    {
+        cout<<salary<<"\t\t"<<n<<"\t\t"<<gs<<"\t\t"<<pf<<"\t\t"<<ns<<endl;
+    }
+};
+int main(){
+    income object[5];
+    int salary,i,gssum=0,pfsum=0,nssum=0;
+    char n[20];
+    for(i=0;i<5;i++)
+    {
+    cout<<"Enter Salary: ";
+    cin>>salary;
+    cout<<"Enter Name: ";
+    cin>>n;
+    object[i].setval(salary,n);
+    object[i].gethra();
+    object[i].getda();
+    object[i].getta();
+    object[i].getgs();
+    object[i].getpf();
+    object[i].getns();
+    }
+    for(i=0;i<5;i++)
+    {
+        gssum=gssum+object[i].gs;
+        pfsum=pfsum+object[i].pf;
+        nssum=nssum+object[i].ns;
+    }
+    cout<<"\t\t\t-:Table Of Formate:-\t"<<endl;
+    cout<<"Salary"<<"\t\t"<<"Name"<<"\t\t"<<"Gs"<<"\t\t"<<"Pf"<<"\t\t"<<"Ns"<<"\n";
+    cout<<"---------------------------------------------------------------------\n";
+    for(i=0;i<5;i++)
+    {
+    object[i].display();
+    }
+    cout<<"---------------------------------------------------------------------\n";
+    cout<<"Total:\t\t\t\t"<<gssum<<"\t\t"<<pfsum<<"\t\t"<<nssum;
+return 0;
+}
+
+Class within string:-
+//Enter sentence and count
+1.Digits 48-57
+2.Vowels
+3.Consonants 
+4.Words
+5.Symbols    
+6.Capital letters 65-90
+7.Small letters  97-122
+8.Repetative letters
+#include<iostream>
+#include<string.h>
+using namespace std;
+class words{
+    private:
+    int l,i,j,dc,vc,conc,wc,syc,capitalc,smallc,repetc;
+    char b[200];
+    public:
+    void setval(int x,char k[])
+    {
+        l=x;
+        for(i=0;i<=l-1;i++)
+        {
+            b[i]=k[i];
+        }
+    }
+    void getDigits()
+    {   
+        dc=0;
+        for(i=0;i<=l-1;i++)
+        {
+            if(b[i]>=48 && b[i]<=57)
+            {
+                dc++;
+            }
+        }
+    }
+    void getVowels()
+    {
+        vc=0;
+        for(i=0;i<=l-1;i++)
+        {
+            if(b[i]=='a'|| b[i]=='e' || b[i]=='i' || b[i]=='o' || b[i]=='u' || b[i]=='A'|| b[i]=='E' || b[i]=='I' || b[i]=='O' || b[i]=='U')
+            {
+                vc++;
+            }
+        }
+    }
+    void getConsonants()
+    {
+        conc=0;
+        for(i=0;i<=l-1;i++)
+        { 
+            if(b[i]>=65&& b[i]<=90)
+            {
+                if(b[i]!='A' && b[i]!='E'&& b[i]!='I'&& b[i]!='O'&& b[i]!='U')
+                {
+                    conc++;
+                }
+            }
+            else if(b[i]>=97 && b[i]<=122)
+            {
+                if(b[i]!='a' && b[i]!='e'&& b[i]!='i'&& b[i]!='o'&& b[i]!='u')
+                {
+                    conc++;
+                }
+            }
+        }
+    }
+    void getWords()
+    {
+        wc=0;
+        for(i=0;i<=l-1;i++)
+        {
+            if(b[i]==' ')
+            {
+                wc++;
+            }
+        }   
+    }
+    void getsymbols()
+    {
+        syc=0;
+        for(i=0;i<=l-1;i++)
+        {
+            if(!(b[i]>=65 && b[i]<=90) && !(b[i]>=97 && b[i]<=122) && !(b[i]>=48 && b[i]<=57) && !(b[i]==' '))
+            {
+                syc++;
+            }
+        }
+    }
+    void getCapitalLetters()
+    {
+        capitalc=0;
+        for(i=0;i<=l-1;i++)
+        {
+            if(b[i]>=65 && b[i]<=90)
+            {
+                capitalc++;
+            }
+        }
+    }
+    void getSmallLetter()
+    {
+        smallc=0;
+        for(i=0;i<=l-1;i++)
+        {
+            if(b[i]>=97 && b[i]<=122)
+            {
+                smallc++;
+            }
+        }
+    }
+    void getRepetativesLatters()
+    {
+        repetc=0;
+        for(i=0;i<=l-1;i++)
+        {
+            for(j=i+1;j<=l-1;j++)
+            {
+                if(b[i]==b[j])
+                {
+                    repetc++;
+                }
+            }
+        }
+    }
+    void display()
+    {
+        cout<<"Total Letters: "<<l<<endl;
+        cout<<"Total Digits: "<<dc<<endl;   
+        cout<<"Total Vowels: "<<vc<<endl;
+        cout<<"Total Consonants: "<<conc<<endl;
+        cout<<"Total Words : "<<wc+1<<endl;
+        cout<<"Total Symbols: "<<syc<<endl;
+        cout<<"Total Capital Letter: "<<capitalc<<endl;
+        cout<<"Total Small Letter: "<<smallc<<endl;
+        cout<<"Total Repetatives Letter: "<<repetc<<endl;
+    }
+};
+int main(){
+    words object;
+    int l,i;
+    char b[200];
+    cout<<"Enter sentence: ";
+    gets(b);
+    l=strlen(b);
+    object.setval(l,b);
+    object.getDigits();
+    object.getVowels();
+    object.getConsonants();
+    object.getWords();
+    object.getsymbols();
+    object.getCapitalLetters();
+    object.getSmallLetter();
+    object.getRepetativesLatters();
+    object.display();
+    return 0;
+}
+
+// enter string in find sub string.
+#include<iostream>
+#include<string.h>
+using namespace std;
+class sub{
+    private: 
+    int l,i;
+    char b[200],sub[200];
+    public:
+    void setval(int x, char k[])
+    {
+        l=x;
+        for(int i=0;i<=l-1;i++)
+        {
+            b[i]=k[i];
+        }
+    }
+    void getsubs(int start, int end)
+    {
+        int j=0;
+        for(i=start;i<=end;i++,j++)
+        {
+            sub[j]=b[i];
+        }
+        sub[j]='\0';
+    }
+    void display()
+    {
+        cout<<"Sub String: "<<sub;
+    }
+};
+int main(){
+    sub object;
+    int l,p,q;
+    char b[200];
+    cout<<"Enter sentence: ";
+    gets(b);
+    l=strlen(b);
+    cout<<"enter starting index: ";
+    cin>>p;
+    cout<<"Enter ending index: ";
+    cin>>q;
+    object.setval(l,b);
+    object.getsubs(p,q);
+    object.display();
+return 0;
+}
+
+// Enter string and sort string (ram is a good boy------> a is ram boy good)
+#include<iostream>
+#include<string.h>
+using namespace std;
+class sorting{
+    private:
+    int l,i,wc,j=0,k=0;
+    char a[20],b[20][20];
+    public: 
+    void setval(int x, char k[])
+    {
+        l=x;
+        for(i=0;i<=l-1;i++)
+        {
+            a[i]=k[i];
+        }        
+    }
+    void getsort()
+    {
+        if(a[i]==' ')
+        {
+            b[j][k]= '\0';
+        }
+        
+    }
+    void display()
+    {
+        
+    }
+};
+int main(){
+    sorting object;
+    int l;
+    char a[20];
+    cout<<"Enter sentence: ";
+    gets(a);
+    l=strlen(a);
+    object.setval(l,a);
+    object.getsort();
+    object.display();
+return 0;
+}
+
+//Enter x and find factorial of x;
+#include<iostream>
+using namespace std;
+rclass factorial{
+    private:
+    int f=1,x,i;
+    public:
+    void setval(int a)
+    {
+        x=a;
+    }
+    void getfact()
+    {
+        for(i=1;i<=x;i++)
+        {
+            f=f*i;
+        }
+    }
+    void display()
+    {
+        cout<<"Factorial of "<<f<<endl;
+    }
+};
+int main(){
+    factorial object;
+    int x;
+    cout<<"Enter x: ";
+    cin>>x;
+    object.setval(x);
+    object.getfact();
+    object.display();
+return 0;
+}
+
+//Enter string and sort string lenght wise(ram is a good boy--> a is ram boy good)
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main()
+{
+    char str[20],temp[20][20];
+    int j=0,k=0;
+    cin.getline(str,20);
+    for(int i=0;str[i]!='\0';i++)
+    {
+        if(str[i]==' ')
+        {
+            temp[j][k] = '\0';
+            j++;
+            k=0;
+        }
+        else if(str[i+1]=='\0')
+        {
+            temp[j][k] = str[i];
+            temp[j][k+1] = '\0';
+            j++;
+        }
+        else
+        {
+            temp[j][k] = str[i];
+            k++;
+        }
+    }
+
+    int lengths[j][2];
+    for(int i=0;i<j;i++)
+    {
+        lengths[i][0] = i;
+        lengths[i][1] = strlen(temp[i]);
+    }
+
+    for(int i=0;i<j;i++)
+    {
+        for(int p=i+1; p<j; p++)
+        {
+            if(lengths[i][1] > lengths[p][1])
+            {
+                int temparr[1][2];
+                temparr[0][0] = lengths[i][0];
+                temparr[0][1] = lengths[i][1];
+
+                lengths[i][0] = lengths[p][0];
+                lengths[i][1] = lengths[p][1];
+
+                lengths[p][0] = temparr[0][0];
+                lengths[p][1] = temparr[0][1];
+            }
+        }
+    }
+
+    for(int i=0;i<j;i++)
+    {
+
+        cout<<temp[lengths[i][0]]<<"  ";
+    }
+
+    return 0;
+}
+
+Outside the class deinfation - in this method a function is only declared
+inside the class but it is created outside the class using scope resolution
+operator (::) .
+
+//Enter x and find factorial of x with outside the class defination  
+#include<iostream>
+using namespace std;
+class factorial{
+    private:
+    int f,x,i;
+    public:
+    void setval(int a)
+    {
+	x=a;
+    }
+    void getfact();
+
+
+    void display()
+    {
+	cout<<"Factorial of "<<f<<endl;
+    }
+};
+void factorial :: getfact()
+{
+	f=1;
+	for(i=1;i<=x;i++)
+	{
+	    f=f*i;
+	}
+}
+int main(){
+    factorial object;
+    int x;
+    cout<<"Enter x: ";
+    cin>>x;
+    object.setval(x);
+    object.getfact();
+    object.display();
+    return 0;
+}
+
+Object as function argument:-
+#include<iostream>
+using namespace std;
+class average{
+    public:
+    int a,b,c;   
+    void setval(int i,int j,int k)
+    {
+        a=i;
+        b=j;
+        c=k;
+    }
+    void display()
+    {
+        cout<<"first value "<<a<<endl;
+        cout<<"Second value"<<b<<endl;
+        cout<<"Third value "<<c<<endl;
+    }
+};
+void getaverage(average obj)  // getaverage naam ka function kuch bhi return nahin kar raha lekin average class ke object ko recv kar raha hai
+{
+    float m;
+    m=(obj.a+obj.b+obj.c)/3;
+    cout<<"average is "<<m<<endl;
+}
+int main(){
+    average object;
+    int a,b,c;
+    cout<<"Enter three value: ";
+    cin>>a>>b>>c;
+    object.setval(a,b,c);   
+    object.display();
+    getaverage(object);  // this line demonstrates object as function argument.
+return 0;
+}
+
+// object as function argument - if an object of a class is passed to a function as an argument, then it is called as object as function argument. advantage is that when we pass an object as a function argument, all of the members of that class also gets automatically transfeered , so we need not to transfrer them individually.
+
+
+//enter 10 values in array and count 3 digit prime values in it. (object as function argument) 
+#include<iostream>
+using namespace std;
+class count{
+    public:
+    int a[10],i,primecount=0;
+    void setval(int k[])
+    {
+        for(i=0;i<10;i++)
+        {
+            a[i]=k[i];
+        }
+    }
+};
+void getprime(count x)
+{   
+    int i,b,f,primecount=0,l;
+    for(i=0;i<10;i++)
+    {
+        f=0;
+        if(x.a[i]>99&&x.a[i]<1000){
+        for(b=2;b<x.a[i];b++)
+        {   
+            if(x.a[i]%b==0)
+            {
+                f=1;
+                break;
+            }
+        }
+        if(f==0)
+        {
+            primecount++;
+        }
+        }
+    }
+    cout<<"Total Prime count: "<<primecount;           
+}
+int main(){
+    count object;
+    int a[10],i;
+    cout<<"Enter 10 value: ";
+    for(i=0;i<10;i++)
+    {
+        cin>>a[i];
+    }
+    object.setval(a);
+    getprime(object);
+return 0;
+}
+
+// dot product of two matrics
+#include<iostream>
+using namespace std;
+class matrix{
+    public:
+    int a[3][3],c[3][3],i,j;
+    void setval(int x[][3])
+    {
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+            {
+                a[i][j]=x[i][j];
+            }
+        }
+    }
+    void display()
+    {
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+            {
+                cout<<" "<<a[i][j];
+            }
+            cout<<"\n";
+        }       
+    }
+};
+void getmatrix(matrix p, matrix q)
+{
+    int i,j,c[3][3],k;
+    cout<<"Result for first and second matrix:\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            c[i][j]=0;
+            for(k=0;k<=2;k++)
+            {
+                c[i][j]=c[i][j]+p.a[i][k]*q.a[k][j];
+            }
+        cout<<" "<<c[i][j];
+        }
+        cout<<"\n";
+    }
+}
+int main(){
+    matrix object1,object2;
+    int a[3][3],b[3][3],c[3][3],i,j;
+    cout<<"Enter First matrix:\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter Second matrix:\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    object1.setval(a);
+    object1.display();
+    
+    object2.setval(b);
+    object2.display();
+    getmatrix(object1,object2);
+return 0;
+}
+
+//enter current date,birth date and print your current age;
+#include<iostream>
+using namespace std;
+class age{
+    public:
+    int a,b,c,age;
+    void setval(int i,int j,int k)
+    {
+        a=i;
+        b=j;
+        c=k;
+    }
+};
+void getage(age p, age q)
+{
+    int a,b,c,date,month,year;
+    date=p.a-q.a;
+    month=p.b-q.b;
+    year=p.c-q.c;
+
+    if(date<0)
+    {
+        date=date+30;
+        month=month-1;
+    }
+    if(month<0)
+    {
+        month=month+12;
+        year=year-1;
+    }
+    cout<<"Age is: "<<year<<" Year "<<month<<" Month "<<date<<" Days"; 
+}
+int main(){
+    age object1,object2;
+    int a,b,c,x,y,z;
+    cout<<"Enter Current Date: ";
+    cin>>a>>b>>c;
+    cout<<"Enter Birth Date: ";
+    cin>>x>>y>>z;
+    object1.setval(a,b,c);
+    object2.setval(x,y,z);
+    getage(object1,object2);
+return 0;
+}
+
+
+returning objects - agar koi function class ke object ko return kare to ise returning objects kehte hain
+#include<iostream>
+using namespace std;
+class age{
+    public:
+    int d,m,y,age;
+    void setval(int i,int j,int k)
+    {
+        d=i;
+        m=j;
+        y=k;
+    }
+    void displayumar()
+    {
+        cout<<"your age is "<<y<<" years ,"<<m<<" months and "<<d<< " days";
+    }
+};
+age getage(age p, age q)
+{
+    age umar;
+    umar.d=p.d-q.d;
+    umar.m=p.m-q.m;
+    umar.y=p.y-q.y;
+
+    if(umar.d<0)
+    {
+        umar.d=umar.d+30;
+        umar.m=umar.m-1;
+    }
+    if(umar.m<0)
+    {
+        umar.m=umar.m+12;
+        umar.y=umar.y-1;
+    }
+    return(umar); 
+}
+int main(){
+    age object1,object2,finalage;
+    int d,m,y,x,s,z;
+    cout<<"Enter Current Date: ";
+    cin>>d>>m>>y;
+    cout<<"Enter Birth Date: ";
+    cin>>x>>s>>z;
+    object1.setval(d,m,y);
+    object2.setval(x,s,z);
+    finalage=getage(object1,object2);
+    finalage.displayumar();
+return 0;
+}
+
+// add two time periods and add them 
+#include<iostream>
+using namespace std;
+class time{
+    public:
+    int h,m,s,t;
+    void setval(int i,int j,int k)
+    {
+        h=i;
+        m=j;
+        s=k;
+    }
+    void displaytime()
+    {
+        cout<<"Time is: "<<h<<" hours "<<m<<" minutes "<<s<<" seconds";
+    }
+};
+time gettime(time p,time q)
+{
+   time t;
+   t.h=p.h+q.h;
+   t.m=p.m+q.m;
+   t.s=p.s+q.s;
+   if(t.h>60)
+   {
+       t.h=t.h+60;
+       t.m=t.m-1;
+   }
+   if(t.m>60)
+   {
+       t.m=t.m+60;
+       t.s=t.s-1;
+   }
+   return(t);
+}
+int main(){
+    time object1,object2,finaltime;
+    int h,m,s,x,y,z;
+    cout<<"Enter Current Time: ";
+    cin>>h>>m>>s;
+    cout<<"Add time periods: ";
+    cin>>x>>y>>z;
+    object1.setval(h,m,s);
+    object2.setval(x,y,z);
+    finaltime=gettime(object1,object2);
+    finaltime.displaytime();
+return 0;
+}
+
+// enter name and surname and concatenate them 
+#include<iostream>
+#include<string.h>
+using namespace std;
+class name{
+    public:
+    char n[20],s[20],f,l,sl;
+    void setval(char i[])
+    {
+        strcpy(n,i);
+    }
+    void displayname()
+    {
+        cout<<"Name:"<<n;
+    }
+};
+name getname(name p, name q)
+{
+    name f;
+    int i,j=0;
+    for(i=0;p.n[i]!='\0'; j++,i++)
+    {
+        f.n[j]=p.n[i];
+    }   
+    f.n[j]=' ';
+    j++;
+    for(i=0;q.n[i]!='\0'; j++,i++)
+    {
+        f.n[j]=q.n[i];
+    }
+    f.n[j]='\0';
+    return(f);
+}
+int main(){
+    name object1,object2,finalname;
+    char n[20],s[20];
+    cout<<"Enter Name: ";
+    cin>>n;
+    cout<<"Enter Surname: ";
+    cin>>s;
+    object1.setval(n);
+    object2.setval(s);
+    finalname=getname(object1,object2);
+    finalname.displayname();
+return 0;
+}
+
+Method overloading :- if there are multiple functions in a class or a program with same name but different signatures then it is called as method overloading.
+
+//find simple interst 
+#include<iostream>
+using namespace std;
+void si() 
+{
+    int amt,rate,year,si;
+    amt=3400;
+    rate=4.4;
+    year=5;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+}
+void si(int aa) 
+{
+    int amt,rate,year,si;
+    amt=aa;
+    rate=4.4;
+    year=5;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+}
+void si(int aa,int rr) 
+{
+    int amt,rate,year,si;
+    amt=aa;
+    rate=rr;
+    year=5;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+}
+void si(int aa,int rr,int yy) 
+{
+    int amt,rate,year,si;
+    amt=aa;
+    rate=rr;
+    year=yy;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+}
+int main(){
+si();
+si(12000);
+si(15000,4);
+si(9000,5.5,6);
+return 0;
+}
+
+#include<iostream>
+using namespace std;
+void si() 
+{
+    int amt,rate,year,si;
+    cout<<"Enter amt: ";
+    cin>>amt;
+    cout<<"Enter rate: ";
+    cin>>rate;
+    cout<<"Enter year: ";
+    cin>>year;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+    cout<<"-------------------------------\n";
+}
+void si(int aa) 
+{
+    int amt,rate,year,si;
+    amt=aa;
+    cout<<"Enter rate: ";
+    cin>>rate;
+    cout<<"Enter year: ";
+    cin>>year;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+    cout<<"------------------------------\n";
+}
+void si(int aa,int rr) 
+{
+    int amt,rate,year,si;
+    amt=aa;
+    rate=rr;
+    cout<<"Enter year: ";
+    cin>>year;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+    cout<<"------------------------------\n";
+}
+void si(int aa,int rr,int yy) 
+{
+    int amt,rate,year,si;
+    amt=aa;
+    rate=rr;
+    year=yy;
+    si=amt*rate*year/100;
+    cout<<"simple interst is "<<si<<endl;
+    cout<<"------------------------------\n";
+}
+int main(){
+    int aa,rr,yy;
+    // question 1
+    si();
+
+    // question 2
+    cout<<"Enter amt: ";
+    cin>>aa;
+    si(aa);
+
+    // question 3
+    cout<<"Enter amt: ";
+    cin>>aa;
+    cout<<"Enter rate: ";
+    cin>>rr;
+    si(aa,rr);
+    
+    
+    // question 4
+    cout<<"Enter amt: ";
+    cin>>aa;
+    cout<<"Enter rate: ";
+    cin>>rr;
+    cout<<"Enter year: ";
+    cin>>yy;
+    si(aa,rr,yy);
+return 0;
+}
+
+#include<iostream>
+using namespace std;
+class smi{
+    private:
+    int amt,rate,year,si;
+    public:
+    void getsi() 
+    {
+        int amt,rate,year,si;
+        cout<<"Enter amt: ";
+        cin>>amt;
+        cout<<"Enter rate: ";
+        cin>>rate;
+        cout<<"Enter year: ";
+        cin>>year;
+        si=amt*rate*year/100;
+        cout<<"simple interst is "<<si<<endl;
+        cout<<"-------------------------------\n";
+    }
+    void getsi(int aa) 
+    {
+        int amt,rate,year,si;
+        amt=aa;
+        cout<<"Enter rate: ";
+        cin>>rate;
+        cout<<"Enter year: ";
+        cin>>year;
+        si=amt*rate*year/100;
+        cout<<"simple interst is "<<si<<endl;
+        cout<<"------------------------------\n";
+    }
+    void getsi(int aa,int rr) 
+    {
+        int amt,rate,year,si;
+        amt=aa;
+        rate=rr;
+        cout<<"Enter year: ";
+        cin>>year;
+        si=amt*rate*year/100;
+        cout<<"simple interst is "<<si<<endl;
+        cout<<"------------------------------\n";
+    }
+    void getsi(int aa,int rr,int yy) 
+    {
+        int amt,rate,year,si;
+        amt=aa;
+        rate=rr;
+        year=yy;
+        si=amt*rate*year/100;
+        cout<<"simple interst is "<<si<<endl;
+        cout<<"------------------------------\n";
+    }
+};
+int main(){
+    smi object;
+    int aa,rr,yy;
+    // question 1
+    object.getsi();
+
+    // question 2
+    cout<<"Enter amt: ";
+    cin>>aa;
+    object.getsi(aa);
+
+    // question 3
+    cout<<"Enter amt: ";
+    cin>>aa;
+    cout<<"Enter rate: ";
+    cin>>rr;
+    object.getsi(aa,rr);
+    
+    
+    // question 4
+    cout<<"Enter amt: ";
+    cin>>aa;
+    cout<<"Enter rate: ";
+    cin>>rr;
+    cout<<"Enter year: ";
+    cin>>yy;
+    object.getsi(aa,rr,yy);
+return 0;
+}
+
+Default Argument:-
+#include<iostream>
+using namespace std;
+int main(){
+    float amount;
+    float value(float p,int n,float r=0.15); //prototype
+    void printline(char ch='*', int len=40); //prototype
+
+    printline();    //user default values for arguments
+
+    amount=value(5000.00,5);    //default for 3rd argument
+
+    cout<<"\n   Final value = "<<amount<<"\n\n";
+    printline('=');     //use default value for 2nd argument 
+return 0;
+}
+/*-----------------------------------------------------*/
+float value(float p,int n,float r)
+{
+    int year = 1;
+    float sum = p;
+
+    while (year<=n)
+    {
+        sum=sum*(1+r);
+        year=year+1;
+    }
+    return(sum);
+}
+void printline(char ch, int len)
+{
+    for(int i=1;i<=len;i++) cout<<ch;
+    cout<<"\n";
+}
+
+
+//find simple interst with using defaltu argument
+#include<iostream>
+using namespace std;
+int main(){
+    float si;
+    float simpleinterst(float p, float r, float y=2);
+
+    si=simpleinterst(2000,20);
+    cout<<"Simple Interst: "<<si<<endl;
+    return 0;
+}
+float simpleinterst(float p, float r, float y)
+{
+    float si;
+    si=p*r*y/100;
+    return(si);
+}
+
+//find simple interst with using defaltu argument
+#include<iostream>
+using namespace std;
+void si()
+{
+    float si;
+    float simpleinterst(float p, float r, float y=2);
+    si=simpleinterst(2000,200);
+    cout<<"Simple Interst: "<<si<<endl;
+}
+void si(float p)
+{   
+    float si;
+    float simpleinterst(float p, float r , float y=2);
+    si=simpleinterst(p,20);    
+    cout<<"Simple Intrest: "<<si<<endl;
+}
+void si(float p, float r)
+{
+    float si;
+    float simpleinterst(float p , float r , float y=2);
+    si=simpleinterst(p,r);
+    cout<<"Simple Intrest: "<<si<<endl;
+}
+void si(float p, float r , float y)
+{
+    float si;
+    float simpleinterst(float p, float r, float y);
+    si=simpleinterst(p,r,y);
+    cout<<"Simple Intrest: "<<si<<endl;
+}
+int main(){
+    si();
+    si(1200);
+    si(1200,20);
+    si(2000,20,4);
+return 0;
+}
+float simpleinterst(float p, float r, float y)
+{
+    float si;
+    si=p*r*y/100;
+    return(si);
+}
+
+Static Class Member:-
+Basic Meaning of Static Storage Class
+1. static variable is automatically initialized to zero
+2. static variable is initialized only once.
+
+Use of Static in Object Oriented Programming
+1. a static variable is  shared between the objects of the class.
+2. a static variable is not maintained seperately for all the object of class.
+3.  a static variable is automatically initialized to zero
+4. a static variable is necessary to be declared outisde the class with the help of scope resolution operator (::)
+
+#include<iostream>
+using namespace std;
+class item{
+    static int count;
+    int number;
+    public:
+    void getdata(int a)
+    {
+        number=a;
+        count++;
+    }
+    void getcount(void)
+    {
+        cout<<"count: "<<endl;
+        cout<<count<<"\n";
+    }  
+};
+int item :: count;
+int main(){
+    item a,b,c;     //count is initilized to zera
+    a.getcount();   // display count
+    b.getcount();
+    c.getcount();
+
+    a.getdata(100);
+    b.getdata(200);
+    c.getdata(300);
+
+    cout<<"After reading data"<<"\n";
+
+    a.getcount();
+    b.getcount();
+    c.getcount();
+return 0;
+}
+
+//print value of a using static member class
+#include<iostream>
+using namespace std;
+int main() {
+    
+    int i;
+      for(i=1;i<=10;i++) 
+      {
+        static int a;
+        cout<<a<<endl;
+        a++;
+      }
+return(0);
+}
+
+Static Member Function:-
+a static member function is shared between the objects of the class.
+
+
+a static member function is called using the class name, not the object. we call it like 
+classname::function()
+
+#include<iostream>
+using namespace std;
+class test
+{
+    int code;
+    static int count;
+    public:
+    void setcode(void)
+    {
+        code= ++count;
+    }
+    void showcode(void)
+    {
+        cout<<"object number: "<<code<<"\n";
+    }
+    static void showcount(void)
+    {
+        cout<<"count: "<<count<<"\n";
+    }
+};
+int test::count;
+int main(){
+    test t1,t2;
+
+    t1.setcode();
+    t2.setcode();
+
+    test::showcount();
+    
+    test t3;
+    t3.setcode();
+
+    test::showcount();
+     
+    t1.showcode();
+    t2.showcode();
+    t3.showcode();
+return 0;
+}
+
+Friend Function:-
+
+A friend funcition possessec certain special charaacteristics:
+
+1. it is not in the scope of the class to which it has been declared as friend.
+2. since it is not in the scope of the class, it cannot be called using the object if that class.
+3. it can be invoked like a normal function without the help of any object.
+4. unlike member function, it cannot access the member names directly and has to use an object name and dot membership operator with each member name (e.g. A.x)
+5. it can be declared either in the public or the private part of a class without affecting its meaning.
+6. usually, it has the objects as argument.
+7. private variables using as a public variables with friend function.
+
+#include<iostream>
+using namespace std;
+class sample{
+    int a;
+    int b;
+    public:
+    void setval()
+    { 
+        a=25; 
+        b=40; 
+    }
+    friend float mean(sample s);
+};
+float mean(sample s)
+{
+    return(s.a + s.b)/2.0;
+}
+int main(){
+    sample x;   //object x
+    x.setval();
+    cout<<"Mean value = "<<mean(x)<<"\n";
+return 0;
+}
+
+//friend function with in two class
+#include<iostream>
+using namespace std;
+class num;
+class sample{
+    int a,b;
+    public:
+    void setval()
+    { 
+        a=25; 
+        b=40; 
+    }
+    friend void mean(sample s , num n);
+};
+class num{
+    int x,y;
+    public:
+    void setval()
+    {
+        x=10;
+        y=15;
+    }
+    friend void mean(sample s, num n);
+};
+void mean(sample s , num n)
+{
+    float q,p;
+    p=(s.a + s.b)/2.0;
+    cout<<p<<endl;
+    q=(n.x + n.y)/2.0;    
+    cout<<q<<endl;
+}
+int main(){
+    sample i;   //object x
+    i.setval();
+    num j;
+    j.setval();
+    mean(i,j);
+    return 0;
+}
+
+//friend function with in two class
+#include<iostream>
+using namespace std;
+class num;
+class sample{
+    int a,b,i,j;
+    public:
+    void setval()
+    { 
+        a=25; 
+        b=40; 
+    }
+    friend num  mean(sample s , num n);
+};
+class num{
+    int x,y;
+    public:
+    void setval()
+    {
+        x=10;
+        y=15;
+    }
+    void display()
+    {
+        cout<<x<<endl;
+        cout<<y<<endl;
+    }
+    friend num mean(sample s, num n);
+};
+num mean(sample s , num n)
+{
+    num q;
+    q.x=(s.a + n.x)/2.0;
+    q.y=(s.b+n.y)/2;
+    return(q);
+}
+int main(){
+    num r;
+    sample i;   
+    i.setval();
+    num j;
+    j.setval();
+    r=mean(i,j);
+    r.display();
+    return 0;
+}
+
+//enter current date , birth date and find current age using one friend class;
+#include<iostream>
+using namespace std;
+class mydate{
+    int d,m,y;
+    public:
+    void setval(int a, int b, int c)
+    {
+        d=a;
+        m=b;
+        y=c;
+    }
+    void displayage()
+    {
+       cout<<"Your Age: "<<y<<" Year "<<m<<" Month "<<d<<" Days ";
+    }
+    friend mydate age(mydate t, mydate t1);
+};
+mydate age(mydate t , mydate t1){
+    mydate s;
+    int date,year,month;
+    s.d=t.d-t1.d;
+    s.m=t.m-t1.m;
+    s.y=t.y-t1.y;
+
+    if(s.d<0)
+    {
+        s.d=s.d+30;
+        s.m=s.m-1;
+    }
+    if(s.m<0)
+    {
+        s.m=s.m+12;
+        s.y=s.y-1;
+    }
+    return(s);
+}
+int main(){
+    mydate obj1,obj2,finalage;
+    int d,m,y,d1,m1,y1;
+    cout<<"Enter current date, month, year: "<<endl;
+    cin>>d>>m>>y;     
+    cout<<"Enter birth date, month, year: "<<endl;
+    cin>>d1>>m1>>y1;
+    obj1.setval(d,m,y);
+    obj2.setval(d1,m1,y1);
+    finalage=age(obj1,obj2);
+    finalage.displayage();
+    return 0;
+}
+
+//enter current date , birth date and find current age using two friend class;
+#include<iostream>
+using namespace std;
+class birth;
+class date{
+    int d,m,y;
+    public:
+    void setval(int a, int b, int c)
+    {
+        d=a;
+        m=b;
+        y=c;
+    }
+    friend void age(birth b , date t);
+};
+class birth{
+    int i,j,k;
+    public:
+    void setval(int x, int y, int z)
+    {
+        i=x;
+        j=y;
+        k=z;
+    }
+    friend void age(birth b , date t);
+};
+void age(birth b ,date t){
+    int date,year,month;
+    date=t.d-b.i;
+    month=t.m-b.j;
+    year=t.y-b.k;
+
+    if(date<0)
+    {
+        date=date+30;
+        month=month-1;
+    }
+    if(month<0)
+    {
+        month=month+12;
+        year=year-1;
+    }
+    cout<<"Your Age: "<<year<<" Year "<<month<<" Month "<<date<<" Days ";
+}
+int main(){
+    int d,m,y,i,j,k;
+    cout<<"Enter current date, month, year: "<<endl;
+    cin>>d>>m>>y;     
+    cout<<"Enter birth date, month, year: "<<endl;
+    cin>>i>>j>>k;
+    date p;
+    p.setval(d,m,y);
+
+    birth q;
+    q.setval(i,j,k);
+    age(q,p);
+return 0;
+}
+
+// dot product of two matrics wiht using friend function.
+#include<iostream>
+using namespace std;
+class matrix{
+    int a[3][3],i,j;
+    public:
+    void setval(int x[][3])
+    {
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+            {
+                a[i][j]=x[i][j];
+            }
+        }
+    }
+    friend void matric(matrix p, matrix q);
+};
+void matric(matrix p, matrix q){
+    int i,j,c[3][3],k;
+    cout<<"Result for first and second matrix:\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            c[i][j]=0;
+            for(k=0;k<=2;k++)
+            {
+                c[i][j]=c[i][j]+p.a[i][k]*q.a[k][j];
+            }
+        cout<<" "<<c[i][j];
+        }
+        cout<<"\n";
+    }
+}
+int main(){
+    matrix obj1,obj2;
+    int a[3][3],b[3][3],c[3][3],i,j;
+    cout<<"Enter First matrix:\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter Second matrix:\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3 ;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    obj1.setval(a);
+    obj2.setval(b);
+    matric(obj1,obj2);
+    return 0;
+}
+
+// dot product of two matrics without using friend function.
+#include<iostream>
+using namespace std;
+class matrix{
+    public:
+    int a[3][3],b[3][3],c[3][3],i,j;
+    void setval(int x[][3])
+    {
+        for(i=0;i<3;i++)
+        {
+            for(j=0;j<3;j++)
+            {
+                a[i][j]=x[i][j];
+            }
+        }
+    }
+    void display()
+    {
+        for(i=0;i<=2;i++)
+        {
+            for(j=0;j<=2;j++)
+            {
+                cout<<" "<<c[i][j];
+            }
+            cout<<"\n";
+        }
+    }
+};
+matrix getmatric(matrix p, matrix q){
+    matrix m;
+    int i,j,c[3][3],k;
+    cout<<"Result for first and second matrix:\n";
+    for(i=0;i<=2;i++)
+    {
+        for(j=0;j<=2;j++)
+        {
+            m.c[i][j]=0;
+            for(k=0;k<=2;k++)
+            {
+                m.c[i][j]=m.c[i][j]+p.a[i][k]*q.a[k][j];
+            }
+        }
+    }
+    return(m);
+}
+int main(){
+    matrix obj1,obj2,multi;
+    int a[3][3],b[3][3],c[3][3],i,j;
+    cout<<"Enter First matrix:\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>a[i][j];
+        }
+    }
+    cout<<"Enter Second matrix:\n";
+    for(i=0;i<3;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            cin>>b[i][j];
+        }
+    }
+    obj1.setval(a);
+    obj2.setval(b);
+    multi=getmatric(obj1,obj2);
+    multi.display();
+    return 0;
+}
+
+Swaping Class:-
+//Enter two value and swaping 
+#include<iostream>
+using namespace std;
+class second;
+class first{
+    int a;
+    public:
+    void setval()
+    {
+        a=5;
+    }
+    void display()
+    {
+        cout<<"first a : "<<a<<endl;
+    }
+    friend void swap(first &f, second &s);
+};
+class second{
+    int a1;
+    public:
+    void setval()
+    {
+        a1=50;
+    }
+    void display()
+    {
+        cout<<"second a : "<<a1<<endl;
+    }
+    friend void swap(first &f, second &s);
+};
+void swap(first &f, second &s){
+    int x;
+    x=f.a;
+    f.a=s.a1;
+    s.a1=x;
+}
+int main(){
+    first i;
+    i.setval();
+
+    second j;
+    j.setval();
+ 
+    swap(i,j);
+    i.display();
+    j.display();
+return 0;
+}
